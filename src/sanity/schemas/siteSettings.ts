@@ -4,8 +4,6 @@ export const siteSettings = defineType({
   name: 'siteSettings',
   title: 'Site Settings',
   type: 'document',
-  // Singleton: prevent creating or deleting this document
-  __experimental_actions: ['update', 'publish'],
   fields: [
     defineField({ name: 'contactEmail', title: 'Contact Email', type: 'string' }),
     defineField({
