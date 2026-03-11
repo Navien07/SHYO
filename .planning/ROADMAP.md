@@ -8,7 +8,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Infrastructure** — Tech stack wired together, CMS schemas defined, deployment live
+- [x] **Phase 1: Infrastructure** — Tech stack wired together, CMS schemas defined, deployment live (Plan 01/03 complete)
 - [ ] **Phase 2: Shared UI Foundation** — Layout shell, navigation, brand tokens, i18n message files
 - [ ] **Phase 3: Core Static Pages** — Homepage, About Us, Contact Us with working contact form
 - [ ] **Phase 4: CMS-Driven Pages** — Our Team, Our Programmes, PDF Document Library
