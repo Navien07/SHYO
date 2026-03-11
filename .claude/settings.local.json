@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node \"$HOME/.claude/get-shit-done/bin/gsd-tools.cjs\" commit \"docs: initialize project\" --files .planning/PROJECT.md 2>&1)",
+      "Bash(git add:*)",
+      "WebFetch(domain:www.sanity.io)",
+      "WebFetch(domain:astro.build)",
+      "WebSearch",
+      "WebFetch(domain:sanity.io)",
+      "WebFetch(domain:next-intl.dev)",
+      "WebFetch(domain:vercel.com)",
+      "WebFetch(domain:cloudinary.com)",
+      "WebFetch(domain:formspree.io)",
+      "WebFetch(domain:supabase.com)",
+      "WebFetch(domain:resend.com)",
+      "WebFetch(domain:www.netlify.com)",
+      "WebFetch(domain:payloadcms.com)",
+      "WebFetch(domain:www.contentful.com)",
+      "WebFetch(domain:react.email)",
+      "WebFetch(domain:www.shadcn.com)",
+      "WebFetch(domain:ui.shadcn.com)",
+      "WebFetch(domain:strapi.io)",
+      "WebFetch(domain:hygraph.com)",
+      "WebFetch(domain:react-hook-form.com)",
+      "WebFetch(domain:zod.dev)",
+      "Bash(git -C \"C:/Users/navie/OneDrive/Documents/ANeura/HYO\" add .planning/research/ && git -C \"C:/Users/navie/OneDrive/Documents/ANeura/HYO\" commit -m \"docs: add domain research\".)"
+    ]
+  }
+}
