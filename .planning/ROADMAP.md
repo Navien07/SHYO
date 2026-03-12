@@ -8,7 +8,7 @@
 
 ## Phases
 
-- [x] **Phase 1: Infrastructure** — Tech stack wired together, CMS schemas defined, deployment live (Plan 01/03 complete)
+- [x] **Phase 1: Infrastructure** — Tech stack wired together, CMS schemas defined, deployment live, Dependabot + UptimeRobot operational (3/3 plans complete)
 - [ ] **Phase 2: Shared UI Foundation** — Layout shell, navigation, brand tokens, i18n message files
 - [ ] **Phase 3: Core Static Pages** — Homepage, About Us, Contact Us with working contact form
 - [ ] **Phase 4: CMS-Driven Pages** — Our Team, Our Programmes, PDF Document Library
@@ -157,7 +157,7 @@
 
 | Phase | Name | Requirements | Status | Completed |
 |-------|------|-------------|--------|-----------|
-| 1 | Infrastructure | INFRA-01–07, ADMIN-01–04 (11 req) | Not started | — |
+| 1 | Infrastructure | INFRA-01–07, ADMIN-01–04 (11 req) | Complete | 2026-03-12 |
 | 2 | Shared UI Foundation | BRAND-01–09, I18N-01–05 (14 req) | Not started | — |
 | 3 | Core Static Pages | HOME-01–05, ABOUT-01–04, CONT-01–06 (15 req) | Not started | — |
 | 4 | CMS-Driven Pages | TEAM-01–03, PROG-01–04, DOCS-01–05 (12 req) | Not started | — |

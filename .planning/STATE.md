@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 01-infrastructure
-current_plan: 02 of 03
-status: unknown
-stopped_at: "Checkpoint reached: Task 2 of 01-02-PLAN.md awaiting human verification of Vercel deployment"
-last_updated: "2026-03-11T12:27:58.530Z"
+current_phase: 02-shared-ui
+current_plan: 03 of 03
+status: phase-complete
+stopped_at: Completed 01-03-PLAN.md - Phase 1 Infrastructure fully complete, SUMMARY.md written
+last_updated: "2026-03-12T03:50:19.723Z"
 progress:
   total_phases: 5
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -21,15 +21,15 @@ progress:
 
 ## Current Status
 
-**Stage:** Phase 1 execution in progress
-**Current Phase:** 01-infrastructure
-**Current Plan:** 02 of 03
-**Stopped At:** Checkpoint reached: Task 2 of 01-02-PLAN.md awaiting human verification of Vercel deployment
-**Resume From:** `.planning/phases/01-infrastructure/01-02-PLAN.md`
+**Stage:** Phase 1 complete — ready to begin Phase 2
+**Current Phase:** 02-shared-ui
+**Current Plan:** 03 of 03 (Phase 1 fully complete)
+**Stopped At:** Completed 01-03-PLAN.md - Phase 1 Infrastructure fully complete, SUMMARY.md written
+**Resume From:** `.planning/phases/02-shared-ui/`
 
 ## Progress
 
-Phase 1 (01-infrastructure): [##---------] 1/3 plans complete
+Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 
 ## Session History
 
@@ -43,7 +43,7 @@ Phase 1 (01-infrastructure): [##---------] 1/3 plans complete
 
 ## Active Phase
 
-**Phase 1: Infrastructure** — Plan 01 of 03 complete
+**Phase 2: Shared UI Foundation** — Phase 1 complete (3/3 plans), Phase 2 not yet started
 
 ## Decisions
 
@@ -54,6 +54,12 @@ Phase 1 (01-infrastructure): [##---------] 1/3 plans complete
 - next-intl middleware matcher pattern: /((?!api|_next|_vercel|studio|.*\\..*).*)/ to exclude Studio
 - [Phase 01-infrastructure]: SANITY_REVALIDATE_SECRET must be set identically in Vercel env vars AND Sanity webhook secret field
 - [Phase 01-infrastructure]: Resend domain verification is async (24-48h DNS propagation) — initiate on Day 1
+- [Phase 01-infrastructure]: RESEND_API_KEY deferred to Phase 3 — Resend account not yet created; contact form wired in Phase 3
+- [Phase 01-infrastructure]: vercel.json required explicit framework: nextjs field — Vercel auto-detection insufficient for App Router routing
+- [Phase 01-infrastructure]: ISR webhook setup is user-action only — manage.sanity.io dashboard required, cannot be automated via CLI
+- [Phase 01-infrastructure]: Dependabot groups package families (sanity, next-intl, tailwind) to reduce PR noise — one grouped PR per family per week
+- [Phase 01-infrastructure]: UptimeRobot free tier selected for 5-minute monitoring — sufficient for low-traffic NGO site at zero cost
+- [Phase 01-infrastructure]: Two org-email Sanity admin accounts satisfy ADMIN-03 — prevents single-point-of-failure for CMS access
 
 ## Performance Metrics
 
@@ -61,6 +67,8 @@ Phase 1 (01-infrastructure): [##---------] 1/3 plans complete
 |-------|------|----------|-------|-------|
 | 01-infrastructure | 01 | 11min | 2 | 23 |
 | Phase 01-infrastructure P02 | 5min | 1 tasks | 1 files |
+| Phase 01-infrastructure P02 | 180 | 2 tasks | 2 files |
+| Phase 01-infrastructure P03 | 15 | 2 tasks | 1 files |
 
 ## Flags
 

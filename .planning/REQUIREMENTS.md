@@ -12,8 +12,8 @@
 - [x] **INFRA-03**: next-intl v4 configured with URL-prefixed locale routing (`/en/`, `/ms/`, `/ta/`)
 - [x] **INFRA-04**: Site deployed to Vercel with Singapore edge node
 - [x] **INFRA-05**: Resend account connected for transactional email delivery
-- [ ] **INFRA-06**: Dependabot enabled for automated dependency security updates
-- [ ] **INFRA-07**: UptimeRobot monitoring configured to alert org email on outages
+- [x] **INFRA-06**: Dependabot enabled for automated dependency security updates
+- [x] **INFRA-07**: UptimeRobot monitoring configured to alert org email on outages
 
 ### Branding & Global UI
 
@@ -93,7 +93,7 @@
 
 - [x] **ADMIN-01**: `siteSettings` Sanity schema stores contact email, WhatsApp number, and social URLs (nothing hardcoded)
 - [x] **ADMIN-02**: Sanity Studio accessible for non-technical admins to manage all content
-- [ ] **ADMIN-03**: At least two admin accounts registered under org's official email (not personal emails)
+- [x] **ADMIN-03**: At least two admin accounts registered under org's official email (not personal emails)
 - [x] **ADMIN-04**: Sanity webhook triggers ISR revalidation so published content appears within seconds
 
 ### SEO & Legal
