@@ -1,0 +1,27 @@
+# .github/dependabot.yml
+# Source: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Kuala_Lumpur"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+    groups:
+      sanity:
+        patterns:
+          - "sanity"
+          - "@sanity/*"
+          - "next-sanity"
+      next-intl:
+        patterns:
+          - "next-intl"
+      tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
