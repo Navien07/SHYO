@@ -5,13 +5,13 @@ milestone_name: milestone
 current_phase: 02-shared-ui
 current_plan: 03 of 03 (Phase 1 fully complete)
 status: unknown
-stopped_at: Completed 02-01-PLAN.md - Wave 0 test stubs created, 7 RED tests in tests/ui/
-last_updated: "2026-03-13T13:28:45.583Z"
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-13T13:35:18.060Z"
 progress:
   total_phases: 5
   completed_phases: 1
   total_plans: 6
-  completed_plans: 4
+  completed_plans: 5
 ---
 
 # Project State
@@ -24,7 +24,7 @@ progress:
 **Stage:** Phase 1 complete — ready to begin Phase 2
 **Current Phase:** 02-shared-ui
 **Current Plan:** 03 of 03 (Phase 1 fully complete)
-**Stopped At:** Completed 02-01-PLAN.md - Wave 0 test stubs created, 7 RED tests in tests/ui/
+**Stopped At:** Completed 02-02-PLAN.md
 **Resume From:** `.planning/phases/02-shared-ui/`
 
 ## Progress
@@ -62,6 +62,8 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 - [Phase 01-infrastructure]: Two org-email Sanity admin accounts satisfy ADMIN-03 — prevents single-point-of-failure for CMS access
 - [Phase 02-shared-ui]: All test stubs use fs.readFileSync/existsSync — avoids Next.js import errors in node test environment
 - [Phase 02-shared-ui]: Wave 0 TDD: write all test stubs first (RED) before any implementation — gives Plans 02 and 03 stable feedback loop
+- [Phase 02-shared-ui]: Nav.tsx is Server Component; NavLink/LanguageSwitcher/MobileDrawer are client components for locale-aware active-state detection
+- [Phase 02-shared-ui]: LanguageSwitcher uses @/i18n/navigation (not next/navigation) to prevent locale-stacking bug
 
 ## Performance Metrics
 
@@ -72,6 +74,7 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 | Phase 01-infrastructure P02 | 180 | 2 tasks | 2 files |
 | Phase 01-infrastructure P03 | 15 | 2 tasks | 1 files |
 | Phase 02-shared-ui P01 | 3 | 2 tasks | 7 files |
+| Phase 02-shared-ui P02 | 4 | 3 tasks | 11 files |
 
 ## Flags
 

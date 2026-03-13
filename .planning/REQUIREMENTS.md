@@ -24,7 +24,7 @@
 - [x] **BRAND-05**: Sticky navigation bar visible on all pages
 - [x] **BRAND-06**: Consistent header and footer with contact info, social links, and privacy policy link
 - [x] **BRAND-07**: Functional 404 page
-- [ ] **BRAND-08**: First Contentful Paint ≤ 1.8s; images optimised and lazy-loaded
+- [x] **BRAND-08**: First Contentful Paint ≤ 1.8s; images optimised and lazy-loaded
 - [x] **BRAND-09**: WCAG 2.1 AA colour contrast (≥ 4.5:1), alt text, keyboard navigation, heading hierarchy
 
 ### Internationalisation
