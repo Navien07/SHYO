@@ -127,3 +127,28 @@
     @apply font-sans;
   }
 }
+
+/* === Seputeh HYO Brand Tokens === */
+/* Append after existing @layer base block */
+
+@theme {
+  /* Brand colours — generates bg-brand-green, text-brand-green, border-brand-green, etc. */
+  --color-brand-green: #32a852;
+  --color-brand-green-dark: #1e7a36;   /* Hover states; white text = ~5.1:1 WCAG AA ✓ */
+  --color-brand-saffron: #c96a00;      /* CTAs; black text on saffron bg ≈ 5.2:1 WCAG AA ✓ */
+  --color-brand-charcoal: #1a1a1a;    /* Footer background */
+  --color-brand-charcoal-text: #f5f5f5; /* Footer text */
+}
+
+/* Tamil locale font and line-height override */
+@layer base {
+  html {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  html[lang="ta"] {
+    font-family: var(--font-noto-sans-tamil), sans-serif;
+    line-height: 1.7;
+  }
+}
