@@ -5,13 +5,13 @@ milestone_name: milestone
 current_phase: 02-shared-ui
 current_plan: 03 of 03 (Phase 1 fully complete)
 status: unknown
-stopped_at: Completed 02-02-PLAN.md
-last_updated: "2026-03-13T13:35:18.060Z"
+stopped_at: Completed 02-03-PLAN.md — awaiting human browser verification checkpoint
+last_updated: "2026-03-13T13:40:31.848Z"
 progress:
   total_phases: 5
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
 ---
 
 # Project State
@@ -24,7 +24,7 @@ progress:
 **Stage:** Phase 1 complete — ready to begin Phase 2
 **Current Phase:** 02-shared-ui
 **Current Plan:** 03 of 03 (Phase 1 fully complete)
-**Stopped At:** Completed 02-02-PLAN.md
+**Stopped At:** Completed 02-03-PLAN.md — awaiting human browser verification checkpoint
 **Resume From:** `.planning/phases/02-shared-ui/`
 
 ## Progress
@@ -64,6 +64,8 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 - [Phase 02-shared-ui]: Wave 0 TDD: write all test stubs first (RED) before any implementation — gives Plans 02 and 03 stable feedback loop
 - [Phase 02-shared-ui]: Nav.tsx is Server Component; NavLink/LanguageSwitcher/MobileDrawer are client components for locale-aware active-state detection
 - [Phase 02-shared-ui]: LanguageSwitcher uses @/i18n/navigation (not next/navigation) to prevent locale-stacking bug
+- [Phase 02-shared-ui]: Footer uses Link from @/i18n/navigation (not next/link) — locale-aware links auto-prepend /ms/, /ta/ prefixes
+- [Phase 02-shared-ui]: getSiteSettings() wrapped in try/catch in locale layout — returns null gracefully in CI without Sanity env vars
 
 ## Performance Metrics
 
@@ -75,6 +77,7 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 | Phase 01-infrastructure P03 | 15 | 2 tasks | 1 files |
 | Phase 02-shared-ui P01 | 3 | 2 tasks | 7 files |
 | Phase 02-shared-ui P02 | 4 | 3 tasks | 11 files |
+| Phase 02-shared-ui P03 | 3 | 2 tasks | 7 files |
 
 ## Flags
 

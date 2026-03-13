@@ -9,7 +9,7 @@
 ## Phases
 
 - [x] **Phase 1: Infrastructure** — Tech stack wired together, CMS schemas defined, deployment live, Dependabot + UptimeRobot operational (3/3 plans complete)
-- [ ] **Phase 2: Shared UI Foundation** — Layout shell, navigation, brand tokens, i18n message files
+- [x] **Phase 2: Shared UI Foundation** — Layout shell, navigation, brand tokens, i18n message files (completed 2026-03-13)
 - [ ] **Phase 3: Core Static Pages** — Homepage, About Us, Contact Us with working contact form
 - [ ] **Phase 4: CMS-Driven Pages** — Our Team, Our Programmes, PDF Document Library
 - [ ] **Phase 5: Membership & Polish** — Membership form, responsive QA, accessibility, SEO, admin handover
@@ -64,7 +64,7 @@
 
 **Requirements:** BRAND-01, BRAND-02, BRAND-03, BRAND-04, BRAND-05, BRAND-06, BRAND-07, BRAND-08, BRAND-09, I18N-01, I18N-02, I18N-03, I18N-04, I18N-05
 
-**Plans:** 1/3 plans executed
+**Plans:** 3/3 plans complete
 
 Plans:
 - [ ] 02-01-PLAN.md — Wave 0 test stubs (7 failing tests covering all Phase 2 requirements)
@@ -165,7 +165,7 @@ Plans:
 | Phase | Name | Requirements | Status | Completed |
 |-------|------|-------------|--------|-----------|
 | 1 | Infrastructure | INFRA-01–07, ADMIN-01–04 (11 req) | Complete | 2026-03-12 |
-| 2 | 1/3 | In Progress|  | — |
+| 2 | 3/3 | Complete   | 2026-03-13 | — |
 | 3 | Core Static Pages | HOME-01–05, ABOUT-01–04, CONT-01–06 (15 req) | Not started | — |
 | 4 | CMS-Driven Pages | TEAM-01–03, PROG-01–04, DOCS-01–05 (12 req) | Not started | — |
 | 5 | Membership & Polish | MEMB-01–06, SEO-01–05 (11 req) | Not started | — |
