@@ -26,13 +26,13 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex gap-1 flex-wrap" role="group" aria-label="Language switcher">
+    <div className="flex items-center gap-1" role="group" aria-label="Language switcher">
       {LOCALES.map(({ code, label }) => (
         <button
           key={code}
           onClick={() => handleLocaleChange(code)}
           className={cn(
-            'px-3 py-1 rounded-full text-sm font-medium min-h-[44px] min-w-[44px] transition-colors',
+            'px-3 h-9 min-w-[44px] rounded-full text-sm font-medium whitespace-nowrap flex items-center justify-center transition-colors',
             currentLocale === code
               ? 'bg-brand-green-dark text-white'
               : 'text-gray-600 hover:text-brand-green-dark border border-gray-200 hover:border-brand-green'
