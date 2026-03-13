@@ -17,23 +17,23 @@
 
 ### Branding & Global UI
 
-- [ ] **BRAND-01**: Seputeh HYO logo and brand colours applied across all pages
-- [ ] **BRAND-02**: Noto Sans Tamil loaded via next/font for Tamil locale
-- [ ] **BRAND-03**: Responsive layout across mobile, tablet, and desktop (no horizontal scroll)
-- [ ] **BRAND-04**: Touch targets ≥ 44px; base font ≥ 16px
-- [ ] **BRAND-05**: Sticky navigation bar visible on all pages
-- [ ] **BRAND-06**: Consistent header and footer with contact info, social links, and privacy policy link
-- [ ] **BRAND-07**: Functional 404 page
+- [x] **BRAND-01**: Seputeh HYO logo and brand colours applied across all pages
+- [x] **BRAND-02**: Noto Sans Tamil loaded via next/font for Tamil locale
+- [x] **BRAND-03**: Responsive layout across mobile, tablet, and desktop (no horizontal scroll)
+- [x] **BRAND-04**: Touch targets ≥ 44px; base font ≥ 16px
+- [x] **BRAND-05**: Sticky navigation bar visible on all pages
+- [x] **BRAND-06**: Consistent header and footer with contact info, social links, and privacy policy link
+- [x] **BRAND-07**: Functional 404 page
 - [ ] **BRAND-08**: First Contentful Paint ≤ 1.8s; images optimised and lazy-loaded
-- [ ] **BRAND-09**: WCAG 2.1 AA colour contrast (≥ 4.5:1), alt text, keyboard navigation, heading hierarchy
+- [x] **BRAND-09**: WCAG 2.1 AA colour contrast (≥ 4.5:1), alt text, keyboard navigation, heading hierarchy
 
 ### Internationalisation
 
-- [ ] **I18N-01**: Language switcher in nav using native-script labels (English / Bahasa Malaysia / தமிழ்) — not flags
-- [ ] **I18N-02**: All UI strings available in EN, BM, and Tamil via next-intl JSON message files
+- [x] **I18N-01**: Language switcher in nav using native-script labels (English / Bahasa Malaysia / தமிழ்) — not flags
+- [x] **I18N-02**: All UI strings available in EN, BM, and Tamil via next-intl JSON message files
 - [ ] **I18N-03**: All CMS content (programmes, team bios, page copy) has EN, BM, and Tamil fields
-- [ ] **I18N-04**: Tamil locale sets `html[lang="ta"]` with correct font-family and line-height (~1.7)
-- [ ] **I18N-05**: Locale URLs bookmarkable and shareable (no component-state toggling)
+- [x] **I18N-04**: Tamil locale sets `html[lang="ta"]` with correct font-family and line-height (~1.7)
+- [x] **I18N-05**: Locale URLs bookmarkable and shareable (no component-state toggling)
 
 ### Homepage
 
