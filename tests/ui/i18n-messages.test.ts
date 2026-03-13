@@ -6,21 +6,23 @@ const REQUIRED_NAV_KEYS = ['home', 'about', 'programmes', 'team', 'documents', '
 const REQUIRED_FOOTER_KEYS = ['tagline', 'privacyPolicy', 'copyright', 'quickLinks', 'contact'];
 const REQUIRED_NOT_FOUND_KEYS = ['title', 'description', 'backHome'];
 
-function loadMessages(locale: string) {
-  return JSON.parse(
-    fs.readFileSync(path.resolve(process.cwd(), `messages/${locale}.json`), 'utf-8')
-  );
+function loadMessages(locale: string): Record<string, Record<string, string>> | null {
+  try {
+    return JSON.parse(
+      fs.readFileSync(path.resolve(process.cwd(), `messages/${locale}.json`), 'utf-8')
+    );
+  } catch {
+    return null;
+  }
 }
 
 for (const locale of ['en', 'ms', 'ta']) {
   describe(`messages/${locale}.json (I18N-02)`, () => {
-    let messages: Record<string, Record<string, string>>;
-    try {
-      messages = loadMessages(locale);
-    } catch {
-      it('file must be valid JSON', () => { expect.fail(`messages/${locale}.json is missing or invalid`); });
-      continue;
-    }
+    const messages = loadMessages(locale);
+
+    it('file must be valid JSON', () => {
+      expect(messages).not.toBeNull();
+    });
 
     for (const key of REQUIRED_NAV_KEYS) {
       it(`has nav.${key}`, () => {
