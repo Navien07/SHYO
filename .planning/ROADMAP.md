@@ -64,6 +64,13 @@
 
 **Requirements:** BRAND-01, BRAND-02, BRAND-03, BRAND-04, BRAND-05, BRAND-06, BRAND-07, BRAND-08, BRAND-09, I18N-01, I18N-02, I18N-03, I18N-04, I18N-05
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Wave 0 test stubs (7 failing tests covering all Phase 2 requirements)
+- [ ] 02-02-PLAN.md — Brand tokens + fonts + navigation.ts + Header/Nav/LanguageSwitcher/MobileDrawer + GROQ helpers
+- [ ] 02-03-PLAN.md — Footer + locale layout wiring + 404 page + complete EN/BM/Tamil message files
+
 **Success Criteria:**
 1. Navigating between `/en/`, `/ms/`, and `/ta/` via the language switcher changes the URL and all UI strings without a full page reload; URLs are bookmarkable and shareable.
 2. On a mid-range Android device, Tamil text renders with Noto Sans Tamil (not a system fallback), correct line-height, and no clipped descenders.
@@ -158,7 +165,7 @@
 | Phase | Name | Requirements | Status | Completed |
 |-------|------|-------------|--------|-----------|
 | 1 | Infrastructure | INFRA-01–07, ADMIN-01–04 (11 req) | Complete | 2026-03-12 |
-| 2 | Shared UI Foundation | BRAND-01–09, I18N-01–05 (14 req) | Not started | — |
+| 2 | Shared UI Foundation | BRAND-01–09, I18N-01–05 (14 req) | In progress | — |
 | 3 | Core Static Pages | HOME-01–05, ABOUT-01–04, CONT-01–06 (15 req) | Not started | — |
 | 4 | CMS-Driven Pages | TEAM-01–03, PROG-01–04, DOCS-01–05 (12 req) | Not started | — |
 | 5 | Membership & Polish | MEMB-01–06, SEO-01–05 (11 req) | Not started | — |
@@ -169,4 +176,4 @@
 
 *Roadmap created: 2026-03-11*
 *Granularity: coarse (5 phases)*
-*Next step: `/gsd:plan-phase 1`*
+*Next step: `/gsd:execute-phase 02-shared-ui`*
