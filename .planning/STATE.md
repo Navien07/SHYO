@@ -5,8 +5,8 @@ milestone_name: milestone
 current_phase: 02-shared-ui
 current_plan: 03 of 03 (Phase 1 fully complete)
 status: unknown
-stopped_at: Completed 02-03-PLAN.md — awaiting human browser verification checkpoint
-last_updated: "2026-03-13T13:40:31.848Z"
+stopped_at: Completed 02-03-PLAN.md — Phase 2 Shared UI Foundation complete
+last_updated: "2026-03-13T14:13:52.686Z"
 progress:
   total_phases: 5
   completed_phases: 2
@@ -24,7 +24,7 @@ progress:
 **Stage:** Phase 1 complete — ready to begin Phase 2
 **Current Phase:** 02-shared-ui
 **Current Plan:** 03 of 03 (Phase 1 fully complete)
-**Stopped At:** Completed 02-03-PLAN.md — awaiting human browser verification checkpoint
+**Stopped At:** Completed 02-03-PLAN.md — Phase 2 Shared UI Foundation complete
 **Resume From:** `.planning/phases/02-shared-ui/`
 
 ## Progress
@@ -66,6 +66,7 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 - [Phase 02-shared-ui]: LanguageSwitcher uses @/i18n/navigation (not next/navigation) to prevent locale-stacking bug
 - [Phase 02-shared-ui]: Footer uses Link from @/i18n/navigation (not next/link) — locale-aware links auto-prepend /ms/, /ta/ prefixes
 - [Phase 02-shared-ui]: getSiteSettings() wrapped in try/catch in locale layout — returns null gracefully in CI without Sanity env vars
+- [Phase 02-shared-ui]: LanguageSwitcher pills use h-9 fixed height + whitespace-nowrap instead of min-h-[44px] flex-wrap — eliminates Tamil script height variation while keeping min-w-[44px] for WCAG touch target
 
 ## Performance Metrics
 
@@ -78,6 +79,7 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 | Phase 02-shared-ui P01 | 3 | 2 tasks | 7 files |
 | Phase 02-shared-ui P02 | 4 | 3 tasks | 11 files |
 | Phase 02-shared-ui P03 | 3 | 2 tasks | 7 files |
+| Phase 02-shared-ui P03 | 30 | 3 tasks | 8 files |
 
 ## Flags
 

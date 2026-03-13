@@ -67,7 +67,7 @@
 **Plans:** 3/3 plans complete
 
 Plans:
-- [ ] 02-01-PLAN.md — Wave 0 test stubs (7 failing tests covering all Phase 2 requirements)
+- [x] 02-01-PLAN.md — Wave 0 test stubs (7 failing tests covering all Phase 2 requirements) (completed 2026-03-13)
 - [ ] 02-02-PLAN.md — Brand tokens + fonts + navigation.ts + Header/Nav/LanguageSwitcher/MobileDrawer + GROQ helpers
 - [ ] 02-03-PLAN.md — Footer + locale layout wiring + 404 page + complete EN/BM/Tamil message files
 
