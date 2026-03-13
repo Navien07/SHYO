@@ -6,6 +6,23 @@
     "team": "Our Team",
     "documents": "Documents",
     "contact": "Contact Us",
-    "membership": "Be Part of Us"
+    "membership": "Be Part of Us",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "footer": {
+    "tagline": "Est. 2002",
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "© {year} Seputeh HYO. All rights reserved.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Us",
+    "followUs": "Follow Us",
+    "email": "Email",
+    "whatsapp": "WhatsApp"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "backHome": "Back to Home"
   }
 }

@@ -6,6 +6,23 @@
     "team": "Pasukan Kami",
     "documents": "Dokumen",
     "contact": "Hubungi Kami",
-    "membership": "Sertai Kami"
+    "membership": "Sertai Kami",
+    "openMenu": "Buka menu navigasi",
+    "closeMenu": "Tutup menu navigasi"
+  },
+  "footer": {
+    "tagline": "Ditubuhkan 2002",
+    "privacyPolicy": "Dasar Privasi",
+    "copyright": "© {year} Seputeh HYO. Hak cipta terpelihara.",
+    "quickLinks": "Pautan Pantas",
+    "contact": "Hubungi Kami",
+    "followUs": "Ikuti Kami",
+    "email": "E-mel",
+    "whatsapp": "WhatsApp"
+  },
+  "NotFound": {
+    "title": "Halaman Tidak Dijumpai",
+    "description": "Halaman yang anda cari tidak wujud atau telah dialihkan.",
+    "backHome": "Kembali ke Laman Utama"
   }
 }
