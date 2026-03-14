@@ -68,8 +68,8 @@
 
 Plans:
 - [x] 02-01-PLAN.md — Wave 0 test stubs (7 failing tests covering all Phase 2 requirements) (completed 2026-03-13)
-- [ ] 02-02-PLAN.md — Brand tokens + fonts + navigation.ts + Header/Nav/LanguageSwitcher/MobileDrawer + GROQ helpers
-- [ ] 02-03-PLAN.md — Footer + locale layout wiring + 404 page + complete EN/BM/Tamil message files
+- [x] 02-02-PLAN.md — Brand tokens + fonts + navigation.ts + Header/Nav/LanguageSwitcher/MobileDrawer + GROQ helpers
+- [x] 02-03-PLAN.md — Footer + locale layout wiring + 404 page + complete EN/BM/Tamil message files
 
 **Success Criteria:**
 1. Navigating between `/en/`, `/ms/`, and `/ta/` via the language switcher changes the URL and all UI strings without a full page reload; URLs are bookmarkable and shareable.
@@ -93,6 +93,15 @@ Plans:
 - All pages rendered in EN, BM, and Tamil with translated copy
 
 **Requirements:** HOME-01, HOME-02, HOME-03, HOME-04, HOME-05, ABOUT-01, ABOUT-02, ABOUT-03, ABOUT-04, CONT-01, CONT-02, CONT-03, CONT-04, CONT-05, CONT-06
+
+**Plans:** 5 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Wave 0 TDD stubs (homepage, about, contact page tests RED + extend schema + i18n test files)
+- [ ] 03-02-PLAN.md — Wave 1: siteSettings schema extension + GROQ queries + next.config.ts + all i18n namespaces
+- [ ] 03-03-PLAN.md — Wave 2: Homepage (HeroSection + ImpactStats + ProgrammeHighlights)
+- [ ] 03-04-PLAN.md — Wave 2: About Us page (parallel with 03-03)
+- [ ] 03-05-PLAN.md — Wave 3: Contact Us page + ContactForm + Server Action + Resend wiring
 
 **Success Criteria:**
 1. Visiting `/en/`, `/ms/`, and `/ta/` each shows a distinct homepage with the mission statement above the fold, impact numbers, and at least one programme highlight pulled from Sanity.
@@ -165,8 +174,8 @@ Plans:
 | Phase | Name | Requirements | Status | Completed |
 |-------|------|-------------|--------|-----------|
 | 1 | Infrastructure | INFRA-01–07, ADMIN-01–04 (11 req) | Complete | 2026-03-12 |
-| 2 | 3/3 | Complete   | 2026-03-13 | — |
-| 3 | Core Static Pages | HOME-01–05, ABOUT-01–04, CONT-01–06 (15 req) | Not started | — |
+| 2 | Shared UI Foundation | BRAND-01–09, I18N-01–05 (14 req) | Complete | 2026-03-13 |
+| 3 | Core Static Pages | HOME-01–05, ABOUT-01–04, CONT-01–06 (15 req) | Planned | — |
 | 4 | CMS-Driven Pages | TEAM-01–03, PROG-01–04, DOCS-01–05 (12 req) | Not started | — |
 | 5 | Membership & Polish | MEMB-01–06, SEO-01–05 (11 req) | Not started | — |
 
@@ -176,4 +185,4 @@ Plans:
 
 *Roadmap created: 2026-03-11*
 *Granularity: coarse (5 phases)*
-*Next step: `/gsd:execute-phase 02-shared-ui`*
+*Next step: `/gsd:execute-phase 03-core-static-pages`*
