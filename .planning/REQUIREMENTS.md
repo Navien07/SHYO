@@ -37,18 +37,18 @@
 
 ### Homepage
 
-- [ ] **HOME-01**: Hero section with mission statement above the fold
-- [ ] **HOME-02**: Impact section showing years active, member count, and programmes delivered
-- [ ] **HOME-03**: Highlights of current/recent programmes (CMS-driven)
-- [ ] **HOME-04**: Call-to-action button linking to Be Part of Us
-- [ ] **HOME-05**: Social media links visible in footer
+- [x] **HOME-01**: Hero section with mission statement above the fold
+- [x] **HOME-02**: Impact section showing years active, member count, and programmes delivered
+- [x] **HOME-03**: Highlights of current/recent programmes (CMS-driven)
+- [x] **HOME-04**: Call-to-action button linking to Be Part of Us
+- [x] **HOME-05**: Social media links visible in footer
 
 ### About Us
 
-- [ ] **ABOUT-01**: Organisation history including founding date (16 September 2002)
-- [ ] **ABOUT-02**: Mission and vision statements
-- [ ] **ABOUT-03**: Five focus areas (leadership, culture, community service, social awareness, well-being)
-- [ ] **ABOUT-04**: Organisation registration/details visible on page
+- [x] **ABOUT-01**: Organisation history including founding date (16 September 2002)
+- [x] **ABOUT-02**: Mission and vision statements
+- [x] **ABOUT-03**: Five focus areas (leadership, culture, community service, social awareness, well-being)
+- [x] **ABOUT-04**: Organisation registration/details visible on page
 
 ### Our Team
 
@@ -74,12 +74,12 @@
 
 ### Contact Us
 
-- [ ] **CONT-01**: Contact form with name, email, subject, and message fields
-- [ ] **CONT-02**: Form submissions delivered to org's official email (via Resend)
-- [ ] **CONT-03**: WhatsApp deep link with pre-filled message (`wa.me/` link)
-- [ ] **CONT-04**: Organisation email address displayed
-- [ ] **CONT-05**: Social media links displayed (Facebook, Instagram, and others)
-- [ ] **CONT-06**: Google Map embed showing Seputeh parliamentary area
+- [x] **CONT-01**: Contact form with name, email, subject, and message fields
+- [x] **CONT-02**: Form submissions delivered to org's official email (via Resend)
+- [x] **CONT-03**: WhatsApp deep link with pre-filled message (`wa.me/` link)
+- [x] **CONT-04**: Organisation email address displayed
+- [x] **CONT-05**: Social media links displayed (Facebook, Instagram, and others)
+- [x] **CONT-06**: Google Map embed showing Seputeh parliamentary area
 
 ### Documentation
 

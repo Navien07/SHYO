@@ -5,13 +5,13 @@ milestone_name: milestone
 current_phase: 02-shared-ui
 current_plan: 03 of 03 (Phase 1 fully complete)
 status: unknown
-stopped_at: Completed 02-03-PLAN.md — Phase 2 Shared UI Foundation complete
-last_updated: "2026-03-13T14:13:52.686Z"
+stopped_at: Completed 03-01-PLAN.md — Phase 3 test stubs in RED state
+last_updated: "2026-03-16T08:55:50.700Z"
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 11
+  completed_plans: 8
 ---
 
 # Project State
@@ -24,7 +24,7 @@ progress:
 **Stage:** Phase 1 complete — ready to begin Phase 2
 **Current Phase:** 02-shared-ui
 **Current Plan:** 03 of 03 (Phase 1 fully complete)
-**Stopped At:** Completed 02-03-PLAN.md — Phase 2 Shared UI Foundation complete
+**Stopped At:** Completed 03-01-PLAN.md — Phase 3 test stubs in RED state
 **Resume From:** `.planning/phases/02-shared-ui/`
 
 ## Progress
@@ -67,6 +67,10 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 - [Phase 02-shared-ui]: Footer uses Link from @/i18n/navigation (not next/link) — locale-aware links auto-prepend /ms/, /ta/ prefixes
 - [Phase 02-shared-ui]: getSiteSettings() wrapped in try/catch in locale layout — returns null gracefully in CI without Sanity env vars
 - [Phase 02-shared-ui]: LanguageSwitcher pills use h-9 fixed height + whitespace-nowrap instead of min-h-[44px] flex-wrap — eliminates Tamil script height variation while keeping min-w-[44px] for WCAG touch target
+- [Phase 03-core-static-pages]: Contact actions.ts Zod import skipped — fs.readFileSync content check avoids 'use server' module import errors in vitest node env
+- [Phase 03-core-static-pages]: siteSettings schema was pre-extended with heroImage/memberCount/programmesDelivered before TDD plan ran — schema assertions green immediately
+- [Phase 03-core-static-pages]: BM and Tamil translations in home/about/contact namespaces are approximations — require native-speaker review before public launch
+- [Phase 03-core-static-pages]: PROGRAMME_HIGHLIGHTS_QUERY uses GROQ [0..2] slice (inclusive, returns 3 items) — correct off-by-one per GROQ spec
 
 ## Performance Metrics
 
@@ -80,6 +84,8 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 | Phase 02-shared-ui P02 | 4 | 3 tasks | 11 files |
 | Phase 02-shared-ui P03 | 3 | 2 tasks | 7 files |
 | Phase 02-shared-ui P03 | 30 | 3 tasks | 8 files |
+| Phase 03-core-static-pages P02 | 3 | 2 tasks | 6 files |
+| Phase 03-core-static-pages P01 | 3 | 2 tasks | 5 files |
 
 ## Flags
 
