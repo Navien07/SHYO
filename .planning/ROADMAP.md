@@ -175,7 +175,7 @@ Plans:
 |-------|------|-------------|--------|-----------|
 | 1 | Infrastructure | INFRA-01–07, ADMIN-01–04 (11 req) | Complete | 2026-03-12 |
 | 2 | Shared UI Foundation | BRAND-01–09, I18N-01–05 (14 req) | Complete | 2026-03-13 |
-| 3 | Core Static Pages | HOME-01–05, ABOUT-01–04, CONT-01–06 (15 req) | 4/5 plans — In Progress | — |
+| 3 | 4/5 | In Progress|  | — |
 | 4 | CMS-Driven Pages | TEAM-01–03, PROG-01–04, DOCS-01–05 (12 req) | Not started | — |
 | 5 | Membership & Polish | MEMB-01–06, SEO-01–05 (11 req) | Not started | — |
 

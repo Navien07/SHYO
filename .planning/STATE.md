@@ -5,8 +5,8 @@ milestone_name: milestone
 current_phase: 03-core-static-pages
 current_plan: 04 of 05
 status: unknown
-stopped_at: Completed 03-04-PLAN.md — About Us page complete
-last_updated: "2026-03-16T15:47:58.043Z"
+stopped_at: Completed 03-03-PLAN.md — homepage hero, impact stats, programme highlights
+last_updated: "2026-03-16T15:48:09.783Z"
 progress:
   total_phases: 5
   completed_phases: 2
@@ -24,7 +24,7 @@ progress:
 **Stage:** Phase 3 in progress — About Us page complete, Contact page remaining
 **Current Phase:** 03-core-static-pages
 **Current Plan:** 04 of 05
-**Stopped At:** Completed 03-04-PLAN.md — About Us page complete
+**Stopped At:** Completed 03-03-PLAN.md — homepage hero, impact stats, programme highlights
 **Resume From:** `.planning/phases/03-core-static-pages/03-05-PLAN.md`
 
 ## Progress
@@ -75,6 +75,8 @@ Phase 3 (03-core-static-pages): [########..] 4/5 plans complete — IN PROGRESS
 - [Phase 03-core-static-pages]: PROGRAMME_HIGHLIGHTS_QUERY uses GROQ [0..2] slice (inclusive, returns 3 items) — correct off-by-one per GROQ spec
 - [Phase 03-core-static-pages]: About Us page has no CTAs — CONTEXT.md specified none; page is intentionally informational only
 - [Phase 03-core-static-pages]: About Us focus areas rendered via inline array map — five static keys co-located in page for readability without a separate data constant
+- [Phase 03-core-static-pages]: imageUrlBuilder instantiated locally per component — not shared across files per Sanity docs pattern
+- [Phase 03-core-static-pages]: HeroSection falls back to bg-brand-green when heroImage is null — prevents broken layout on first deploy before admin uploads photo
 
 ## Performance Metrics
 
