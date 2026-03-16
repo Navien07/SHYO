@@ -78,6 +78,9 @@ export function ContactForm() {
         {state.sendError && (
           <div className="rounded-md bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
             {t('sendError')}
+            {state.sendErrorDetail && (
+              <p className="mt-1 text-xs opacity-70">{state.sendErrorDetail}</p>
+            )}
           </div>
         )}
 
