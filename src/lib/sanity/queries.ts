@@ -14,6 +14,9 @@ export type SiteSettings = {
   whatsappNumber?: string;
   facebookUrl?: string;
   instagramUrl?: string;
+  heroImage?: { asset: { _ref: string } };
+  memberCount?: number;
+  programmesDelivered?: number;
 };
 
 export type Programme = {
@@ -44,7 +47,11 @@ export type SanityDocument = {
 
 // --- GROQ Queries (defineQuery enables Sanity TypeGen) ---
 export const SITE_SETTINGS_QUERY = defineQuery(
-  `*[_type == "siteSettings"][0]{ _id, contactEmail, whatsappNumber, facebookUrl, instagramUrl }`
+  `*[_type == "siteSettings"][0]{ _id, contactEmail, whatsappNumber, facebookUrl, instagramUrl, heroImage, memberCount, programmesDelivered }`
+);
+
+export const PROGRAMME_HIGHLIGHTS_QUERY = defineQuery(
+  `*[_type == "programme"] | order(_createdAt desc)[0..2] { _id, title, image, category, slug }`
 );
 
 export const ALL_PROGRAMMES_QUERY = defineQuery(
@@ -73,6 +80,14 @@ export async function getSiteSettings(): Promise<SiteSettings | null> {
 export async function getAllProgrammes(): Promise<Programme[]> {
   return sanityFetch<Programme[]>({
     query: ALL_PROGRAMMES_QUERY,
+    tags: ['programme'],
+  });
+}
+
+/** Fetches 3 most recent programmes for homepage highlights. */
+export async function getProgrammeHighlights(): Promise<Programme[]> {
+  return sanityFetch<Programme[]>({
+    query: PROGRAMME_HIGHLIGHTS_QUERY,
     tags: ['programme'],
   });
 }
