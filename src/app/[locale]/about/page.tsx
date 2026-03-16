@@ -1,13 +1,34 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import imageUrlBuilder from '@sanity/image-url';
+import { client } from '@/sanity/client';
+import { getSiteSettings } from '@/lib/sanity/queries';
+
+const builder = imageUrlBuilder(client);
 
 export default async function AboutPage() {
-  const t = await getTranslations('about');
+  const [t, siteSettings] = await Promise.all([
+    getTranslations('about'),
+    getSiteSettings(),
+  ]);
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-16">
       {/* Page heading */}
       <h1 className="text-4xl font-bold mb-2">{t('title')}</h1>
       <p className="text-gray-500 mb-12">{t('foundingDate')}</p>
+
+      {/* Optional photo — upload via Sanity Studio → Site Settings → About Us Page Photo */}
+      {siteSettings?.aboutImage && (
+        <div className="mb-12 rounded-xl overflow-hidden aspect-[16/7] relative">
+          <Image
+            src={builder.image(siteSettings.aboutImage).width(1200).quality(85).url()}
+            alt={t('title')}
+            fill
+            className="object-cover"
+          />
+        </div>
+      )}
 
       {/* Mission & Vision */}
       <section className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-8">

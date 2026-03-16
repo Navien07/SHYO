@@ -74,6 +74,13 @@ export function ContactForm() {
       )}
 
       <form action={formAction} className="space-y-5">
+        {/* Send error banner */}
+        {state.sendError && (
+          <div className="rounded-md bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
+            {t('sendError')}
+          </div>
+        )}
+
         {/* Name */}
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">

@@ -74,6 +74,7 @@
     "messagePlaceholder": "Beritahu kami lebih lanjut...",
     "errorRequired": "Medan ini diperlukan.",
     "errorEmail": "Sila masukkan alamat e-mel yang sah.",
-    "errorMessageMin": "Mesej mesti sekurang-kurangnya 10 aksara."
+    "errorMessageMin": "Mesej mesti sekurang-kurangnya 10 aksara.",
+    "sendError": "Maaf, kami tidak dapat menghantar mesej anda. Sila cuba lagi atau e-mel kami terus."
   }
 }

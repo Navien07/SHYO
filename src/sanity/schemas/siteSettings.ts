@@ -14,6 +14,7 @@ export const siteSettings = defineType({
     defineField({ name: 'facebookUrl', title: 'Facebook URL', type: 'url' }),
     defineField({ name: 'instagramUrl', title: 'Instagram URL', type: 'url' }),
     defineField({ name: 'heroImage', title: 'Hero Background Image', type: 'image', options: { hotspot: true } }),
+    defineField({ name: 'aboutImage', title: 'About Us Page Photo (optional)', type: 'image', options: { hotspot: true }, description: 'Group photo or event photo shown on the About Us page.' }),
     defineField({ name: 'memberCount', title: 'Member Count', type: 'number', description: 'Displayed on homepage impact section. Update when membership grows.' }),
     defineField({ name: 'programmesDelivered', title: 'Programmes Delivered', type: 'number', description: 'Total programmes delivered to date. Update manually.' }),
   ],

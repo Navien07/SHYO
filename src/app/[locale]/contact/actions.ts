@@ -12,6 +12,7 @@ const contactSchema = z.object({
 
 export type ContactFormState = {
   success: boolean;
+  sendError?: boolean;
   errors?: {
     name?: string[];
     email?: string[];
@@ -80,12 +81,12 @@ export async function sendContactForm(
 
     if (error) {
       console.error('Resend error:', error);
-      return { success: false };
+      return { success: false, sendError: true, values: submittedValues };
     }
 
     return { success: true };
   } catch (err) {
     console.error('Contact form send error:', err);
-    return { success: false };
+    return { success: false, sendError: true, values: submittedValues };
   }
 }

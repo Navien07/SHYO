@@ -15,6 +15,7 @@ export type SiteSettings = {
   facebookUrl?: string;
   instagramUrl?: string;
   heroImage?: { asset: { _ref: string } };
+  aboutImage?: { asset: { _ref: string } };
   memberCount?: number;
   programmesDelivered?: number;
 };
@@ -47,7 +48,7 @@ export type SanityDocument = {
 
 // --- GROQ Queries (defineQuery enables Sanity TypeGen) ---
 export const SITE_SETTINGS_QUERY = defineQuery(
-  `*[_type == "siteSettings"][0]{ _id, contactEmail, whatsappNumber, facebookUrl, instagramUrl, heroImage, memberCount, programmesDelivered }`
+  `*[_type == "siteSettings"][0]{ _id, contactEmail, whatsappNumber, facebookUrl, instagramUrl, heroImage, aboutImage, memberCount, programmesDelivered }`
 );
 
 export const PROGRAMME_HIGHLIGHTS_QUERY = defineQuery(

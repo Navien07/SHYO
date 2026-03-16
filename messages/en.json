@@ -74,6 +74,7 @@
     "messagePlaceholder": "Tell us more...",
     "errorRequired": "This field is required.",
     "errorEmail": "Please enter a valid email address.",
-    "errorMessageMin": "Message must be at least 10 characters."
+    "errorMessageMin": "Message must be at least 10 characters.",
+    "sendError": "Sorry, we couldn't send your message. Please try again or email us directly."
   }
 }
