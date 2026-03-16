@@ -143,13 +143,13 @@
 | INFRA-01 – INFRA-07 | Phase 1 | Pending |
 | BRAND-01 – BRAND-09 | Phase 2 | Pending |
 | I18N-01 – I18N-05 | Phase 2 | Pending |
-| HOME-01 – HOME-05 | Phase 3 | Pending |
-| ABOUT-01 – ABOUT-04 | Phase 3 | Pending |
+| HOME-01 – HOME-05 | Phase 3 | Complete |
+| ABOUT-01 – ABOUT-04 | Phase 3 | Complete |
 | TEAM-01 – TEAM-03 | Phase 4 | Pending |
 | PROG-01 – PROG-04 | Phase 4 | Pending |
 | DOCS-01 – DOCS-05 | Phase 4 | Pending |
 | MEMB-01 – MEMB-06 | Phase 5 | Pending |
-| CONT-01 – CONT-06 | Phase 3 | Pending |
+| CONT-01 – CONT-06 | Phase 3 | Complete |
 | ADMIN-01 – ADMIN-04 | Phase 1 | Pending |
 | SEO-01 – SEO-05 | Phase 5 | Pending |
 
