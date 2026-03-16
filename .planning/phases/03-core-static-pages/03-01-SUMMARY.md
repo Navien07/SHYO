@@ -93,7 +93,7 @@ Each task was committed atomically:
 1. **Task 1: Write homepage, about, and contact test stubs (RED)** - `d9bf0a0` (test)
 2. **Task 2: Extend existing test files for siteSettings and i18n Phase 3 namespaces** - `f6ade1d` (test)
 
-**Plan metadata:** _(pending final commit)_
+**Plan metadata:** `0bfdfb5` (docs: complete plan)
 
 ## Files Created/Modified
 
@@ -140,5 +140,17 @@ None - no external service configuration required.
 - All Phase 2 tests remain green (no regression)
 
 ---
+## Self-Check: PASSED
+
+- tests/pages/homepage.test.ts: FOUND
+- tests/pages/about.test.ts: FOUND
+- tests/pages/contact.test.ts: FOUND
+- tests/sanity/schemas.test.ts: FOUND (modified)
+- tests/ui/i18n-messages.test.ts: FOUND (modified)
+- .planning/phases/03-core-static-pages/03-01-SUMMARY.md: FOUND
+- Commit d9bf0a0: FOUND (task 1)
+- Commit f6ade1d: FOUND (task 2)
+- Commit 0bfdfb5: FOUND (metadata)
+
 *Phase: 03-core-static-pages*
 *Completed: 2026-03-16*
