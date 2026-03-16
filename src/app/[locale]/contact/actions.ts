@@ -18,6 +18,12 @@ export type ContactFormState = {
     subject?: string[];
     message?: string[];
   };
+  values?: {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  };
 };
 
 export async function sendContactForm(
@@ -29,6 +35,13 @@ export async function sendContactForm(
     email: formData.get('email'),
     subject: formData.get('subject'),
     message: formData.get('message'),
+  };
+
+  const submittedValues = {
+    name: String(raw.name ?? ''),
+    email: String(raw.email ?? ''),
+    subject: String(raw.subject ?? ''),
+    message: String(raw.message ?? ''),
   };
 
   const parsed = contactSchema.safeParse(raw);
@@ -44,6 +57,7 @@ export async function sendContactForm(
     return {
       success: false,
       errors: normalizedErrors,
+      values: submittedValues,
     };
   }
 

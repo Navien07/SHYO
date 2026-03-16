@@ -41,7 +41,7 @@ export default async function HeroSection({ siteSettings }: HeroSectionProps) {
             </Button>
           </Link>
           <Link href="/about">
-            <Button variant="outline" className="border-white text-white hover:bg-white/20">
+            <Button variant="outline" className="border-white text-white bg-transparent hover:bg-white/20 hover:text-white">
               {t('learnMore')}
             </Button>
           </Link>
