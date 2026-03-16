@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 current_phase: 03-core-static-pages
-current_plan: 04 of 05
-status: unknown
-stopped_at: Completed 03-03-PLAN.md — homepage hero, impact stats, programme highlights
-last_updated: "2026-03-16T15:48:09.783Z"
+current_plan: 05 of 05
+status: complete
+stopped_at: Completed 03-05-PLAN.md — Contact Us page with Server Action, ContactForm, map embed
+last_updated: "2026-03-16T15:55:57.502Z"
 progress:
   total_phases: 5
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 11
-  completed_plans: 10
+  completed_plans: 11
 ---
 
 # Project State
@@ -21,17 +21,17 @@ progress:
 
 ## Current Status
 
-**Stage:** Phase 3 in progress — About Us page complete, Contact page remaining
+**Stage:** Phase 3 complete — all 5 plans done
 **Current Phase:** 03-core-static-pages
-**Current Plan:** 04 of 05
-**Stopped At:** Completed 03-03-PLAN.md — homepage hero, impact stats, programme highlights
-**Resume From:** `.planning/phases/03-core-static-pages/03-05-PLAN.md`
+**Current Plan:** 05 of 05
+**Stopped At:** Completed 03-05-PLAN.md — Contact Us page with Server Action, ContactForm, map embed
+**Resume From:** Next phase (04)
 
 ## Progress
 
 Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 Phase 2 (02-shared-ui): [##########] 3/3 plans complete — DONE
-Phase 3 (03-core-static-pages): [########..] 4/5 plans complete — IN PROGRESS
+Phase 3 (03-core-static-pages): [##########] 5/5 plans complete — DONE
 
 ## Session History
 
@@ -45,7 +45,7 @@ Phase 3 (03-core-static-pages): [########..] 4/5 plans complete — IN PROGRESS
 
 ## Active Phase
 
-**Phase 3: Core Static Pages** — Plans 01–04 complete (4/5), Plan 05 (Contact page) remaining
+**Phase 3: Core Static Pages** — All 5 plans complete (5/5) — DONE
 
 ## Decisions
 
@@ -77,6 +77,8 @@ Phase 3 (03-core-static-pages): [########..] 4/5 plans complete — IN PROGRESS
 - [Phase 03-core-static-pages]: About Us focus areas rendered via inline array map — five static keys co-located in page for readability without a separate data constant
 - [Phase 03-core-static-pages]: imageUrlBuilder instantiated locally per component — not shared across files per Sanity docs pattern
 - [Phase 03-core-static-pages]: HeroSection falls back to bg-brand-green when heroImage is null — prevents broken layout on first deploy before admin uploads photo
+- [Phase 03-core-static-pages]: Zod email schema uses z.string().email() (no arg) — email error normalised to 'email' key post-parse to satisfy test + translateError pattern
+- [Phase 03-core-static-pages]: Resend instantiated inside sendContactForm body — prevents API key leaking to client bundle
 
 ## Performance Metrics
 
@@ -94,6 +96,7 @@ Phase 3 (03-core-static-pages): [########..] 4/5 plans complete — IN PROGRESS
 | Phase 03-core-static-pages P01 | 3 | 2 tasks | 5 files |
 | Phase 03-core-static-pages P04 | 8min | 1 tasks | 1 files |
 | Phase 03-core-static-pages P03 | 7 | 2 tasks | 4 files |
+| Phase 03-core-static-pages P05 | 8 | 2 tasks | 3 files |
 
 ## Flags
 
