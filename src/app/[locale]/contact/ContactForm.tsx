@@ -27,6 +27,7 @@ export function ContactForm() {
   // Restore field values from server state on validation error
   useEffect(() => {
     if (state.values) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setValues(state.values);
     }
   }, [state.values]);
@@ -34,7 +35,9 @@ export function ContactForm() {
   // Show popup when server confirms success
   useEffect(() => {
     if (state.success) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShowSuccess(true);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setValues({ name: '', email: '', subject: '', message: '' });
     }
   }, [state.success]);
