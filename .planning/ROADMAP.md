@@ -94,13 +94,13 @@ Plans:
 
 **Requirements:** HOME-01, HOME-02, HOME-03, HOME-04, HOME-05, ABOUT-01, ABOUT-02, ABOUT-03, ABOUT-04, CONT-01, CONT-02, CONT-03, CONT-04, CONT-05, CONT-06
 
-**Plans:** 2/5 plans executed
+**Plans:** 4/5 plans executed
 
 Plans:
-- [ ] 03-01-PLAN.md — Wave 0 TDD stubs (homepage, about, contact page tests RED + extend schema + i18n test files)
-- [ ] 03-02-PLAN.md — Wave 1: siteSettings schema extension + GROQ queries + next.config.ts + all i18n namespaces
-- [ ] 03-03-PLAN.md — Wave 2: Homepage (HeroSection + ImpactStats + ProgrammeHighlights)
-- [ ] 03-04-PLAN.md — Wave 2: About Us page (parallel with 03-03)
+- [x] 03-01-PLAN.md — Wave 0 TDD stubs (homepage, about, contact page tests RED + extend schema + i18n test files)
+- [x] 03-02-PLAN.md — Wave 1: siteSettings schema extension + GROQ queries + next.config.ts + all i18n namespaces
+- [x] 03-03-PLAN.md — Wave 2: Homepage (HeroSection + ImpactStats + ProgrammeHighlights)
+- [x] 03-04-PLAN.md — Wave 2: About Us page (parallel with 03-03)
 - [ ] 03-05-PLAN.md — Wave 3: Contact Us page + ContactForm + Server Action + Resend wiring
 
 **Success Criteria:**
@@ -175,7 +175,7 @@ Plans:
 |-------|------|-------------|--------|-----------|
 | 1 | Infrastructure | INFRA-01–07, ADMIN-01–04 (11 req) | Complete | 2026-03-12 |
 | 2 | Shared UI Foundation | BRAND-01–09, I18N-01–05 (14 req) | Complete | 2026-03-13 |
-| 3 | 2/5 | In Progress|  | — |
+| 3 | Core Static Pages | HOME-01–05, ABOUT-01–04, CONT-01–06 (15 req) | 4/5 plans — In Progress | — |
 | 4 | CMS-Driven Pages | TEAM-01–03, PROG-01–04, DOCS-01–05 (12 req) | Not started | — |
 | 5 | Membership & Polish | MEMB-01–06, SEO-01–05 (11 req) | Not started | — |
 

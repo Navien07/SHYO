@@ -2,34 +2,36 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 02-shared-ui
-current_plan: 03 of 03 (Phase 1 fully complete)
+current_phase: 03-core-static-pages
+current_plan: 04 of 05
 status: unknown
-stopped_at: Completed 03-01-PLAN.md — Phase 3 test stubs in RED state
-last_updated: "2026-03-16T08:55:50.700Z"
+stopped_at: Completed 03-04-PLAN.md — About Us page complete
+last_updated: "2026-03-16T15:47:58.043Z"
 progress:
   total_phases: 5
   completed_phases: 2
   total_plans: 11
-  completed_plans: 8
+  completed_plans: 10
 ---
 
 # Project State
 
 **Project:** Seputeh HYO Website
-**Last Updated:** 2026-03-11
+**Last Updated:** 2026-03-16
 
 ## Current Status
 
-**Stage:** Phase 1 complete — ready to begin Phase 2
-**Current Phase:** 02-shared-ui
-**Current Plan:** 03 of 03 (Phase 1 fully complete)
-**Stopped At:** Completed 03-01-PLAN.md — Phase 3 test stubs in RED state
-**Resume From:** `.planning/phases/02-shared-ui/`
+**Stage:** Phase 3 in progress — About Us page complete, Contact page remaining
+**Current Phase:** 03-core-static-pages
+**Current Plan:** 04 of 05
+**Stopped At:** Completed 03-04-PLAN.md — About Us page complete
+**Resume From:** `.planning/phases/03-core-static-pages/03-05-PLAN.md`
 
 ## Progress
 
 Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
+Phase 2 (02-shared-ui): [##########] 3/3 plans complete — DONE
+Phase 3 (03-core-static-pages): [########..] 4/5 plans complete — IN PROGRESS
 
 ## Session History
 
@@ -43,7 +45,7 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 
 ## Active Phase
 
-**Phase 2: Shared UI Foundation** — Phase 1 complete (3/3 plans), Phase 2 not yet started
+**Phase 3: Core Static Pages** — Plans 01–04 complete (4/5), Plan 05 (Contact page) remaining
 
 ## Decisions
 
@@ -71,6 +73,8 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 - [Phase 03-core-static-pages]: siteSettings schema was pre-extended with heroImage/memberCount/programmesDelivered before TDD plan ran — schema assertions green immediately
 - [Phase 03-core-static-pages]: BM and Tamil translations in home/about/contact namespaces are approximations — require native-speaker review before public launch
 - [Phase 03-core-static-pages]: PROGRAMME_HIGHLIGHTS_QUERY uses GROQ [0..2] slice (inclusive, returns 3 items) — correct off-by-one per GROQ spec
+- [Phase 03-core-static-pages]: About Us page has no CTAs — CONTEXT.md specified none; page is intentionally informational only
+- [Phase 03-core-static-pages]: About Us focus areas rendered via inline array map — five static keys co-located in page for readability without a separate data constant
 
 ## Performance Metrics
 
@@ -86,6 +90,8 @@ Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 | Phase 02-shared-ui P03 | 30 | 3 tasks | 8 files |
 | Phase 03-core-static-pages P02 | 3 | 2 tasks | 6 files |
 | Phase 03-core-static-pages P01 | 3 | 2 tasks | 5 files |
+| Phase 03-core-static-pages P04 | 8min | 1 tasks | 1 files |
+| Phase 03-core-static-pages P03 | 7 | 2 tasks | 4 files |
 
 ## Flags
 
