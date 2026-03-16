@@ -52,6 +52,9 @@ describe('siteSettings schema', () => {
     expect(actions).not.toContain('create');
     expect(actions).not.toContain('delete');
   });
+  it('has heroImage field', () => expect(getFieldNames(siteSettings)).toContain('heroImage'));
+  it('has memberCount field', () => expect(getFieldNames(siteSettings)).toContain('memberCount'));
+  it('has programmesDelivered field', () => expect(getFieldNames(siteSettings)).toContain('programmesDelivered'));
 });
 
 describe('schema registry', () => {
