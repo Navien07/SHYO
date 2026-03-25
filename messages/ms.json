@@ -54,6 +54,13 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "Nombor Pendaftaran"
   },
+  "team": {
+    "title": "Pasukan Kami",
+    "presidentSection": "Presiden",
+    "seniorSection": "Pegawai Kanan",
+    "committeeSection": "Ahli Jawatankuasa",
+    "emptyState": "Ahli pasukan akan disenaraikan di sini tidak lama lagi."
+  },
   "contact": {
     "title": "Hubungi Kami",
     "formName": "Nama Anda",

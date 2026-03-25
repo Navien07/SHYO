@@ -35,6 +35,7 @@ export type TeamMember = {
   role: LocalizedString;
   photo?: { asset: { _ref: string } };
   order?: number;
+  tier?: 'president' | 'senior' | 'committee';
 };
 
 export type SanityDocument = {
@@ -60,7 +61,7 @@ export const ALL_PROGRAMMES_QUERY = defineQuery(
 );
 
 export const ALL_TEAM_MEMBERS_QUERY = defineQuery(
-  `*[_type == "teamMember"] | order(order asc, _createdAt asc) { _id, name, role, photo, order }`
+  `*[_type == "teamMember"] | order(order asc, _createdAt asc) { _id, name, role, photo, order, tier }`
 );
 
 export const ALL_DOCUMENTS_QUERY = defineQuery(
