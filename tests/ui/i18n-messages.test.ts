@@ -8,6 +8,9 @@ const REQUIRED_NOT_FOUND_KEYS = ['title', 'description', 'backHome'];
 const REQUIRED_HOME_KEYS = ['heroHeadline', 'heroSubline', 'joinUs', 'learnMore', 'impactYears', 'impactMembers', 'impactProgrammes', 'programmesHeading', 'viewAll', 'comingSoon'];
 const REQUIRED_ABOUT_KEYS = ['title', 'foundingDate', 'missionHeading', 'visionHeading', 'mission', 'vision', 'focusAreasHeading', 'registrationHeading', 'registrationNumber'];
 const REQUIRED_CONTACT_KEYS = ['title', 'formName', 'formEmail', 'formSubject', 'formMessage', 'formSubmit', 'successMessage', 'whatsappLabel', 'emailLabel', 'mapLabel', 'followUs'];
+const REQUIRED_TEAM_KEYS = ['title', 'presidentSection', 'seniorSection', 'committeeSection', 'emptyState'];
+const REQUIRED_PROGRAMMES_KEYS = ['title', 'emptyState', 'readMore', 'backToList'];
+const REQUIRED_DOCUMENTS_KEYS = ['title', 'colTitle', 'colCategory', 'colYear', 'colDate', 'colSize', 'download', 'filterAll', 'emptyState'];
 
 function loadMessages(locale: string): Record<string, Record<string, string>> | null {
   try {
@@ -55,6 +58,21 @@ for (const locale of ['en', 'ms', 'ta']) {
     for (const key of REQUIRED_CONTACT_KEYS) {
       it(`has contact.${key}`, () => {
         expect(messages?.contact?.[key]).toBeDefined();
+      });
+    }
+    for (const key of REQUIRED_TEAM_KEYS) {
+      it(`has team.${key}`, () => {
+        expect(messages?.team?.[key]).toBeDefined();
+      });
+    }
+    for (const key of REQUIRED_PROGRAMMES_KEYS) {
+      it(`has programmes.${key}`, () => {
+        expect(messages?.programmes?.[key]).toBeDefined();
+      });
+    }
+    for (const key of REQUIRED_DOCUMENTS_KEYS) {
+      it(`has documents.${key}`, () => {
+        expect(messages?.documents?.[key]).toBeDefined();
       });
     }
   });
