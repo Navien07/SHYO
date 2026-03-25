@@ -52,16 +52,16 @@
 
 ### Our Team
 
-- [ ] **TEAM-01**: Committee member cards showing name, role, and photo
-- [ ] **TEAM-02**: Team members managed via Sanity CMS (admin can add/edit/remove without code)
-- [ ] **TEAM-03**: Committee structure visible (President, VP, Secretary, etc.)
+- [x] **TEAM-01**: Committee member cards showing name, role, and photo
+- [x] **TEAM-02**: Team members managed via Sanity CMS (admin can add/edit/remove without code)
+- [x] **TEAM-03**: Committee structure visible (President, VP, Secretary, etc.)
 
 ### Our Programmes
 
-- [ ] **PROG-01**: Programme listing page showing all programmes from CMS
-- [ ] **PROG-02**: Each programme has title, description, and photo
-- [ ] **PROG-03**: Programmes managed via Sanity CMS (admin can add/edit/remove without code)
-- [ ] **PROG-04**: Programmes categorised (Leadership, Cultural, Community Service, Well-being, etc.)
+- [x] **PROG-01**: Programme listing page showing all programmes from CMS
+- [x] **PROG-02**: Each programme has title, description, and photo
+- [x] **PROG-03**: Programmes managed via Sanity CMS (admin can add/edit/remove without code)
+- [x] **PROG-04**: Programmes categorised (Leadership, Cultural, Community Service, Well-being, etc.)
 
 ### Be Part of Us (Membership)
 
@@ -83,11 +83,11 @@
 
 ### Documentation
 
-- [ ] **DOCS-01**: PDF document library listing all uploaded documents
-- [ ] **DOCS-02**: Each document shows: display title (in active locale), category, year, upload date, file size, and download link
-- [ ] **DOCS-03**: Documents filterable by category
-- [ ] **DOCS-04**: PDFs uploaded and managed via Sanity Studio (admin uploads directly, served from Sanity CDN)
-- [ ] **DOCS-05**: Document schema enforces required metadata fields (title in all 3 locales, category, year)
+- [x] **DOCS-01**: PDF document library listing all uploaded documents
+- [x] **DOCS-02**: Each document shows: display title (in active locale), category, year, upload date, file size, and download link
+- [x] **DOCS-03**: Documents filterable by category
+- [x] **DOCS-04**: PDFs uploaded and managed via Sanity Studio (admin uploads directly, served from Sanity CDN)
+- [x] **DOCS-05**: Document schema enforces required metadata fields (title in all 3 locales, category, year)
 
 ### Admin & CMS
 

@@ -2,150 +2,149 @@
 phase: 01-infrastructure
 plan: "02"
 subsystem: infra
-tags: [vercel, sanity, resend, isr, webhook, deployment]
+tags: [vercel, sanity, next-intl, isr, resend, singapore, webhooks, env-vars]
 
 # Dependency graph
 requires:
-  - phase: 01-infrastructure
-    plan: "01"
-    provides: "Next.js 15 scaffold with vercel.json (sin1), revalidate route, and .env.local.example"
+  - phase: 01-infrastructure-01
+    provides: Next.js 15 scaffold with Sanity schemas, next-intl routing, revalidate API route, vercel.json (sin1)
+
 provides:
-  - vercel.json pinned to Singapore (sin1) region
-  - src/app/api/revalidate/route.ts ISR webhook handler (HMAC-validated, revalidateTag)
-  - .env.local.example with all five env var documentation comments
-  - SANITY_REVALIDATE_SECRET generation instructions for Vercel + Sanity webhook pairing
-  - Deployment configuration ready for Vercel CLI push
-affects:
-  - 01-03 (email requires Resend domain verified and RESEND_API_KEY in Vercel)
-  - all content phases (ISR revalidation confirms Sanity publish -> page refresh pipeline)
+  - Live Vercel deployment at hyo-naviens-projects-1949cb7f.vercel.app (sin1 region)
+  - All four core environment variables set in Vercel project settings
+  - ISR revalidation webhook handler active (route exists, secret configured in Vercel)
+  - Custom domain hyoseputeh.com added to Vercel (DNS propagation pending)
+  - Locale routes /en, /ms, /ta verified live and returning 200
+
+affects: [02-shared-ui, 03-core-pages, 04-cms-pages, 05-membership-polish]
 
 # Tech tracking
 tech-stack:
-  added: []
+  added: [vercel-cli, vercel-deployment, vercel-github-integration]
   patterns:
     - "Vercel region pin via vercel.json regions field (read at deploy time)"
     - "ISR revalidation via Sanity webhook -> /api/revalidate -> revalidateTag(body._type)"
     - "HMAC webhook signature validation via next-sanity parseBody"
+    - "GitHub push to master triggers automatic Vercel production deploy"
 
 key-files:
   created: []
   modified:
+    - vercel.json
     - .env.local.example
 
 key-decisions:
   - "SANITY_REVALIDATE_SECRET must be set identically in Vercel env vars AND Sanity webhook secret field"
-  - "Vercel region sin1 is read from vercel.json at deploy time — no dashboard config needed"
-  - "Resend domain verification is async (24-48h DNS propagation) — initiate on Day 1"
+  - "RESEND_API_KEY deferred to Phase 3 — Resend account not yet created; contact form wired in Phase 3"
+  - "ISR webhook setup is user-action only — cannot be automated via CLI (manage.sanity.io dashboard required)"
+  - "vercel.json required explicit framework: nextjs field — Vercel auto-detection was insufficient for App Router routing"
+  - "Custom domain hyoseputeh.com added early; DNS propagation async (24-72h)"
 
 patterns-established:
-  - "Sanity webhook -> revalidateTag(body._type): tags all cached fetches by document type for granular ISR"
+  - "Vercel deployment: push to master triggers automatic prod deploy via GitHub integration"
+  - "ISR: SANITY_REVALIDATE_SECRET must match identically in Vercel env vars AND Sanity webhook secret field"
 
 requirements-completed: [INFRA-04, INFRA-05, ADMIN-04]
 
 # Metrics
-duration: 5min
+duration: ~180min (includes user verification and DNS setup)
 completed: 2026-03-11
 ---
 
-# Phase 1 Plan 02: Deployment and Services Summary
+# Phase 1 Plan 02: Vercel Deployment with Singapore Edge and ISR Webhook Infrastructure Summary
 
-**Vercel deployment config with Singapore (sin1) region pin, ISR revalidation webhook handler (HMAC-validated via next-sanity parseBody), and .env.local.example updated with source documentation for all five required env vars**
+**Next.js 15 app deployed live to Vercel Singapore (sin1) at hyo-naviens-projects-1949cb7f.vercel.app with all Sanity env vars set, locale routes /en /ms /ta verified returning 200, and ISR revalidation webhook secret pre-configured**
 
 ## Performance
 
-- **Duration:** 5 min
+- **Duration:** ~180 min (includes manual user verification steps and DNS setup)
 - **Started:** 2026-03-11T12:25:54Z
-- **Completed:** 2026-03-11T12:30:00Z
-- **Tasks:** 1/2 (Task 2 is a checkpoint requiring human verification)
-- **Files modified:** 1
+- **Completed:** 2026-03-11T15:34:36Z
+- **Tasks:** 2 of 2 (Task 1 automated, Task 2 human-verify checkpoint — approved by user)
+- **Files modified:** 2
 
 ## Accomplishments
-- vercel.json confirmed with Singapore region (sin1) — no changes needed (already correct from Plan 01)
-- src/app/api/revalidate/route.ts confirmed with correct HMAC validation via parseBody and revalidateTag call
-- .env.local.example updated with documentation comments showing source for each env var
-- SANITY_REVALIDATE_SECRET generated: `37c46723a3bdc96c5b84b58ba29a9ff3e337980d80dcce833b90f16b2188bc42`
+
+- Site deployed to Vercel Singapore (sin1) edge region; production URL confirmed live by user
+- All four core environment variables set in Vercel project settings: NEXT_PUBLIC_SANITY_PROJECT_ID, NEXT_PUBLIC_SANITY_DATASET, SANITY_API_TOKEN, SANITY_REVALIDATE_SECRET
+- Locale routes /en, /ms, /ta verified returning 200 by user
+- Custom domain hyoseputeh.com added to Vercel project (DNS propagation pending)
+- vercel.json corrected with `framework: "nextjs"` field to fix Vercel routing detection
 
 ## Task Commits
 
-1. **Task 1: Prepare deployment configuration** - `11a18f5` (chore)
+Each task was committed atomically:
 
-**Plan metadata:** (pending — waiting on Task 2 human verification)
+1. **Task 1: Prepare deployment configuration and generate secrets** - `11a18f5` (chore)
+2. **Fix: Vercel framework detection and routing** - `3507222` (fix)
+3. **Fix: Deprecated Sanity field, vitest config, missing peer deps** - `5f3254a` (fix)
+4. **Checkpoint documentation** - `242031c` (docs)
+
+**Plan metadata:** (this summary commit)
 
 ## Files Created/Modified
-- `.env.local.example` - Updated with documentation comments for all five env vars (source instructions)
+
+- `vercel.json` - Added `"framework": "nextjs"` field; `regions: ["sin1"]` was already present from Plan 01
+- `.env.local.example` - Updated with documentation comments showing source for each of the five required env vars
 
 ## Decisions Made
-- vercel.json and revalidate route were already correct from Plan 01 — no changes needed to either file
-- Generated SANITY_REVALIDATE_SECRET using Node.js crypto.randomBytes(32) per plan specification
+
+- **RESEND_API_KEY deferred:** Resend account creation and domain verification deferred to Phase 3 (contact form). The key is not needed until the contact form API route is wired in Phase 3. Does not block Phase 2.
+- **ISR webhook is user-action only:** The Sanity webhook at manage.sanity.io cannot be configured programmatically — requires dashboard access. User was given exact configuration steps. Webhook pending user action at manage.sanity.io.
+- **vercel.json needed explicit framework field:** Vercel auto-detection was insufficient for correct Next.js 15 App Router routing. Adding `"framework": "nextjs"` resolved build and routing failures encountered during deployment.
+- **Custom domain added early:** hyoseputeh.com was added to Vercel during this plan; DNS propagation may take 24-72h but was initiated.
 
 ## Deviations from Plan
 
-None - code preparation executed exactly as written. Vercel CLI deployment requires user authentication (expected per plan).
+### Auto-fixed Issues
+
+**1. [Rule 1 - Bug] Fixed Vercel build and routing failure due to missing framework field**
+- **Found during:** Task 1 (deployment step)
+- **Issue:** Vercel deployment built but routes returned errors; auto-detection of the Next.js framework was not working correctly without an explicit framework declaration in vercel.json
+- **Fix:** Added `"framework": "nextjs"` to vercel.json
+- **Files modified:** vercel.json
+- **Verification:** Deployment succeeded; locale routes /en, /ms, /ta confirmed returning 200 by user
+- **Committed in:** 3507222 (fix commit)
+
+**2. [Rule 1 - Bug] Fixed deprecated Sanity field, vitest reporter config, and missing peer dependencies**
+- **Found during:** Task 1 (build verification)
+- **Issue:** Build had warnings/errors from deprecated `__experimental_actions` in siteSettings schema, incorrect vitest reporter field, and missing Next.js peer deps
+- **Fix:** Removed `__experimental_actions`, corrected vitest config, added missing peer deps
+- **Files modified:** Sanity schema file, vitest.config.ts, package.json
+- **Verification:** Build passed cleanly post-fix
+- **Committed in:** 5f3254a (fix commit)
+
+---
+
+**Total deviations:** 2 auto-fixed (2 bugs)
+**Impact on plan:** Both fixes necessary for deployment to succeed and build to pass. No scope creep.
 
 ## Issues Encountered
-- No GitHub remote configured yet — `git push origin master` in plan steps is a prerequisite that requires user to create a GitHub repo and push before Vercel can import it, OR use `vercel --yes` directly without GitHub integration.
+
+- Vercel framework auto-detection did not recognize the Next.js App Router setup from vercel.json alone — required explicit `framework` field. Fixed inline per Rule 1.
+- `__experimental_actions` was removed in Sanity v3 — removed from siteSettings schema per Sanity migration guidance.
 
 ## User Setup Required
 
-**All deployment steps require user action.** Vercel CLI is installed (v48.2.0) but not authenticated.
+The following items remain as pending user actions:
 
-### Step-by-step deployment instructions:
+1. **Sanity ISR webhook** — Configure at manage.sanity.io -> project -> API -> Webhooks -> Add webhook:
+   - URL: `https://hyo-naviens-projects-1949cb7f.vercel.app/api/revalidate`
+   - Dataset: production
+   - Triggers: Create, Update, Delete
+   - Filter: (leave empty)
+   - Secret: (same value as SANITY_REVALIDATE_SECRET set in Vercel env vars)
 
-**1. Authenticate with Vercel:**
-```bash
-vercel login
-```
+2. **RESEND_API_KEY** — Deferred to Phase 3. Create account at resend.com, add sender domain DNS records (24-48h propagation), then set RESEND_API_KEY in Vercel project env vars.
 
-**2. Push code to GitHub (optional but recommended):**
-```bash
-# Create repo at github.com first, then:
-git remote add origin https://github.com/YOUR-ORG/seputeh-hyo.git
-git push -u origin master
-```
-
-**3. Deploy to Vercel:**
-```bash
-cd "C:/Users/navie/OneDrive/Documents/ANeura/HYO"
-vercel --yes
-```
-
-**4. Set all five environment variables in Vercel:**
-```bash
-vercel env add NEXT_PUBLIC_SANITY_PROJECT_ID production
-vercel env add NEXT_PUBLIC_SANITY_DATASET production
-vercel env add SANITY_API_TOKEN production
-vercel env add SANITY_REVALIDATE_SECRET production
-vercel env add RESEND_API_KEY production
-```
-
-Values needed:
-- `NEXT_PUBLIC_SANITY_PROJECT_ID` — from manage.sanity.io project settings
-- `NEXT_PUBLIC_SANITY_DATASET` — `production`
-- `SANITY_API_TOKEN` — create Viewer token at manage.sanity.io -> API -> Tokens
-- `SANITY_REVALIDATE_SECRET` — `37c46723a3bdc96c5b84b58ba29a9ff3e337980d80dcce833b90f16b2188bc42`
-- `RESEND_API_KEY` — from resend.com dashboard -> API Keys
-
-**5. Trigger production deploy with env vars:**
-```bash
-vercel --prod
-```
-
-**6. Configure Sanity ISR webhook** at manage.sanity.io -> project -> API -> Webhooks -> Add webhook:
-- URL: `https://{your-vercel-domain}/api/revalidate`
-- Dataset: production
-- Trigger on: Create, Update, Delete
-- Filter: (leave empty)
-- Secret: `37c46723a3bdc96c5b84b58ba29a9ff3e337980d80dcce833b90f16b2188bc42`
-
-**7. Set up Resend** at resend.com -> Domains -> Add Domain:
-- Enter the org domain (e.g. seputehhyo.org.my)
-- Add MX, TXT (SPF), and DKIM records at DNS registrar
-- Status will show "Pending" (DNS propagation takes 24-48h)
+3. **Custom domain DNS** — hyoseputeh.com is added to Vercel. Add the Vercel-provided A/CNAME DNS records at your domain registrar to complete the connection (propagation: 24-72h).
 
 ## Next Phase Readiness
-- Plan 01-03 (email) can start once RESEND_API_KEY is set in Vercel and domain is pending verification
-- Content pages and CMS work can proceed once Sanity project ID is configured
-- ISR webhook must be tested before content publishing pipeline is considered complete
+
+- Vercel deployment live and stable — Phase 2 (Shared UI Foundation) can begin immediately
+- All Sanity env vars configured — CMS GROQ queries will work from deployed site
+- ISR webhook pending user action — does not block Phase 2 (only affects publish-to-live latency)
+- RESEND_API_KEY not set — does not block Phase 2 or Phase 3 development; only needed when contact form endpoint is activated
 
 ---
 *Phase: 01-infrastructure*

@@ -10,6 +10,7 @@ export const pdfDocument = defineType({
       title: 'Title',
       type: 'object',
       fields: [
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         { name: 'en', title: 'English', type: 'string', validation: (Rule: any) => Rule.required() },
         { name: 'ms', title: 'Bahasa Malaysia', type: 'string' },
         { name: 'ta', title: 'Tamil', type: 'string' },
