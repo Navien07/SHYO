@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { programme } from '../../src/sanity/schemas/programme';
 import { teamMember } from '../../src/sanity/schemas/teamMember';
-import { document } from '../../src/sanity/schemas/document';
+import { pdfDocument } from '../../src/sanity/schemas/document';
 import { siteSettings } from '../../src/sanity/schemas/siteSettings';
 import { schemaTypes } from '../../src/sanity/schemas/index';
 
@@ -23,6 +23,7 @@ describe('programme schema', () => {
   it('has image field', () => expect(getFieldNames(programme)).toContain('image'));
   it('has category field', () => expect(getFieldNames(programme)).toContain('category'));
   it('has slug field', () => expect(getFieldNames(programme)).toContain('slug'));
+  it('has body field', () => expect(getFieldNames(programme)).toContain('body'));
 });
 
 describe('teamMember schema', () => {
@@ -31,14 +32,35 @@ describe('teamMember schema', () => {
   it('has localized role field', () => expect(hasLocalizedField(teamMember, 'role')).toBe(true));
   it('has photo field', () => expect(getFieldNames(teamMember)).toContain('photo'));
   it('has order field', () => expect(getFieldNames(teamMember)).toContain('order'));
+  it('has tier field', () => expect(getFieldNames(teamMember)).toContain('tier'));
+  it('has tier field with president enum value', () => {
+    const tierField = teamMember.fields?.find((f: { name: string }) => f.name === 'tier') as { options?: { list?: Array<{ value: string }> } } | undefined;
+    const values = tierField?.options?.list?.map((item) => item.value) ?? [];
+    expect(values).toContain('president');
+  });
+  it('has tier field with senior enum value', () => {
+    const tierField = teamMember.fields?.find((f: { name: string }) => f.name === 'tier') as { options?: { list?: Array<{ value: string }> } } | undefined;
+    const values = tierField?.options?.list?.map((item) => item.value) ?? [];
+    expect(values).toContain('senior');
+  });
+  it('has tier field with committee enum value', () => {
+    const tierField = teamMember.fields?.find((f: { name: string }) => f.name === 'tier') as { options?: { list?: Array<{ value: string }> } } | undefined;
+    const values = tierField?.options?.list?.map((item) => item.value) ?? [];
+    expect(values).toContain('committee');
+  });
 });
 
-describe('document schema', () => {
-  it('has name "document"', () => expect(document.name).toBe('document'));
-  it('has localized title field', () => expect(hasLocalizedField(document, 'title')).toBe(true));
-  it('has category field', () => expect(getFieldNames(document)).toContain('category'));
-  it('has year field', () => expect(getFieldNames(document)).toContain('year'));
-  it('has file field', () => expect(getFieldNames(document)).toContain('file'));
+describe('pdfDocument schema', () => {
+  it('has name "pdfDocument"', () => expect(pdfDocument.name).toBe('pdfDocument'));
+  it('has localized title field', () => expect(hasLocalizedField(pdfDocument, 'title')).toBe(true));
+  it('has category field', () => expect(getFieldNames(pdfDocument)).toContain('category'));
+  it('has year field', () => expect(getFieldNames(pdfDocument)).toContain('year'));
+  it('has file field', () => expect(getFieldNames(pdfDocument)).toContain('file'));
+  it('has title field with required en sub-field validation', () => {
+    const titleField = pdfDocument.fields?.find((f: { name: string }) => f.name === 'title') as { fields?: Array<{ name: string; validation?: unknown }> } | undefined;
+    const enField = titleField?.fields?.find((f) => f.name === 'en');
+    expect(enField?.validation).toBeDefined();
+  });
 });
 
 describe('siteSettings schema', () => {
@@ -63,7 +85,7 @@ describe('schema registry', () => {
     const names = schemaTypes.map(s => s.name);
     expect(names).toContain('programme');
     expect(names).toContain('teamMember');
-    expect(names).toContain('document');
+    expect(names).toContain('pdfDocument');
     expect(names).toContain('siteSettings');
   });
 });
