@@ -5,8 +5,8 @@ milestone_name: milestone
 current_phase: 04
 current_plan: 1
 status: Executing Phase 04
-stopped_at: "Completed 04-01-PLAN.md — Wave 0 TDD stubs: schema test bug fix + page/i18n test stubs RED"
-last_updated: "2026-03-25T15:23:18.828Z"
+stopped_at: "Completed 04-04-PLAN.md — Programmes listing + detail pages"
+last_updated: "2026-03-25T15:37:00Z"
 progress:
   total_phases: 5
   completed_phases: 3
@@ -24,8 +24,8 @@ progress:
 **Stage:** Phase 4 in progress — 1/5 plans done
 **Current Phase:** 04-cms-driven-pages
 **Current Plan:** 01 of 05
-**Stopped At:** Completed 04-01-PLAN.md — Wave 0 TDD stubs: schema test bug fix + page/i18n test stubs RED
-**Resume From:** 04-02-PLAN.md (schema mutations + queries + i18n + @portabletext/react)
+**Stopped At:** Completed 04-04-PLAN.md — Programmes listing + detail pages
+**Resume From:** 04-05-PLAN.md (Documents page)
 
 ## Progress
 
@@ -82,6 +82,7 @@ Phase 4 (04-cms-driven-pages): [##        ] 1/5 plans complete — IN PROGRESS
 - [Phase 03-core-static-pages]: Resend instantiated inside sendContactForm body — prevents API key leaking to client bundle
 - [Phase 04-cms-driven-pages]: Schema test bug fix: import changed from '{ document }' to '{ pdfDocument }' — export name is pdfDocument to avoid browser global collision
 - [Phase 04-cms-driven-pages]: Wave 0 TDD: all Phase 4 page test stubs written RED before implementation — 83 failing assertions covering TEAM-01-03, PROG-01-04, DOCS-01-05
+- [Phase 04-cms-driven-pages]: generateStaticParams returns only { slug } objects for programmes — locale segment has its own generateStaticParams
 
 ## Performance Metrics
 
@@ -101,6 +102,7 @@ Phase 4 (04-cms-driven-pages): [##        ] 1/5 plans complete — IN PROGRESS
 | Phase 03-core-static-pages P03 | 7 | 2 tasks | 4 files |
 | Phase 03-core-static-pages P05 | 8 | 2 tasks | 3 files |
 | Phase 04-cms-driven-pages P01 | 5 | 3 tasks | 5 files |
+| Phase 04-cms-driven-pages P04 | 3 | 2 tasks | 6 files |
 
 ## Flags
 
