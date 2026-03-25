@@ -1,23 +1,20 @@
 import { defineField, defineType } from 'sanity';
 
-const localizedString = (name: string, title: string) =>
-  defineField({
-    name,
-    title,
-    type: 'object',
-    fields: [
-      { name: 'en', title: 'English', type: 'string' },
-      { name: 'ms', title: 'Bahasa Malaysia', type: 'string' },
-      { name: 'ta', title: 'Tamil', type: 'string' },
-    ],
-  });
-
-export const document = defineType({
-  name: 'document',
+export const pdfDocument = defineType({
+  name: 'pdfDocument',
   title: 'Document',
   type: 'document',
   fields: [
-    localizedString('title', 'Title'),
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'object',
+      fields: [
+        { name: 'en', title: 'English', type: 'string', validation: (Rule: any) => Rule.required() },
+        { name: 'ms', title: 'Bahasa Malaysia', type: 'string' },
+        { name: 'ta', title: 'Tamil', type: 'string' },
+      ],
+    }),
     defineField({
       name: 'category',
       title: 'Category',

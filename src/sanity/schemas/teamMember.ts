@@ -26,6 +26,19 @@ export const teamMember = defineType({
       type: 'number',
       description: 'Lower numbers appear first (President = 1)',
     }),
+    defineField({
+      name: 'tier',
+      title: 'Committee Tier',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'President', value: 'president' },
+          { title: 'Senior Officer', value: 'senior' },
+          { title: 'Committee Member', value: 'committee' },
+        ],
+      },
+      validation: (Rule) => Rule.required(),
+    }),
   ],
   preview: { select: { title: 'name.en' } },
   orderings: [{ title: 'Display Order', name: 'orderAsc', by: [{ field: 'order', direction: 'asc' }] }],

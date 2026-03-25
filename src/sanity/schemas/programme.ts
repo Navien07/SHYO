@@ -30,6 +30,16 @@ export const programme = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'title.en' } }),
+    defineField({
+      name: 'body',
+      title: 'Body Content',
+      type: 'object',
+      fields: [
+        { name: 'en', title: 'English', type: 'array', of: [{ type: 'block' }] },
+        { name: 'ms', title: 'Bahasa Malaysia', type: 'array', of: [{ type: 'block' }] },
+        { name: 'ta', title: 'Tamil', type: 'array', of: [{ type: 'block' }] },
+      ],
+    }),
   ],
   preview: { select: { title: 'title.en' } },
 });
