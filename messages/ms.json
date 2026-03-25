@@ -54,6 +54,12 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "Nombor Pendaftaran"
   },
+  "programmes": {
+    "title": "Program Kami",
+    "emptyState": "Tiada program tersedia buat masa ini. Semak kembali tidak lama lagi.",
+    "readMore": "Baca Lanjut",
+    "backToList": "Kembali ke Senarai Program"
+  },
   "contact": {
     "title": "Hubungi Kami",
     "formName": "Nama Anda",

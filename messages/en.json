@@ -54,6 +54,12 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "Registration Number"
   },
+  "programmes": {
+    "title": "Our Programmes",
+    "emptyState": "No programmes available yet. Check back soon.",
+    "readMore": "Read More",
+    "backToList": "Back to Programmes"
+  },
   "contact": {
     "title": "Contact Us",
     "formName": "Your Name",

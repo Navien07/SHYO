@@ -27,6 +27,14 @@ export type Programme = {
   image?: { asset: { _ref: string } };
   category: string;
   slug: { current: string };
+  body?: { en?: PortableTextBlock[]; ms?: PortableTextBlock[]; ta?: PortableTextBlock[] };
+};
+
+// PortableTextBlock is a generic block type for Sanity's block content
+export type PortableTextBlock = {
+  _type: string;
+  _key?: string;
+  [key: string]: unknown;
 };
 
 export type TeamMember = {
@@ -59,6 +67,10 @@ export const ALL_PROGRAMMES_QUERY = defineQuery(
   `*[_type == "programme"] | order(_createdAt desc) { _id, title, description, image, category, slug }`
 );
 
+export const PROGRAMME_DETAIL_QUERY = defineQuery(
+  `*[_type == "programme" && slug.current == $slug][0] { _id, title, description, image, category, slug, body }`
+);
+
 export const ALL_TEAM_MEMBERS_QUERY = defineQuery(
   `*[_type == "teamMember"] | order(order asc, _createdAt asc) { _id, name, role, photo, order }`
 );
@@ -81,6 +93,15 @@ export async function getSiteSettings(): Promise<SiteSettings | null> {
 export async function getAllProgrammes(): Promise<Programme[]> {
   return sanityFetch<Programme[]>({
     query: ALL_PROGRAMMES_QUERY,
+    tags: ['programme'],
+  });
+}
+
+/** Fetches a single programme by slug. Returns null if not found. Cached with ISR tag 'programme'. */
+export async function getProgrammeBySlug(slug: string): Promise<Programme | null> {
+  return sanityFetch<Programme | null>({
+    query: PROGRAMME_DETAIL_QUERY,
+    params: { slug },
     tags: ['programme'],
   });
 }
