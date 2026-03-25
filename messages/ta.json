@@ -54,6 +54,13 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "பதிவு எண்"
   },
+  "team": {
+    "title": "எங்கள் குழு",
+    "presidentSection": "தலைவர்",
+    "seniorSection": "மூத்த அதிகாரிகள்",
+    "committeeSection": "குழு உறுப்பினர்கள்",
+    "emptyState": "குழு உறுப்பினர்கள் விரைவில் இங்கே பட்டியலிடப்படுவார்கள்."
+  },
   "contact": {
     "title": "தொடர்பு கொள்ளுங்கள்",
     "formName": "உங்கள் பெயர்",
