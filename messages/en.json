@@ -76,5 +76,29 @@
     "errorEmail": "Please enter a valid email address.",
     "errorMessageMin": "Message must be at least 10 characters.",
     "sendError": "Sorry, we couldn't send your message. Please try again or email us directly."
+  },
+  "team": {
+    "title": "Our Team",
+    "presidentSection": "President",
+    "seniorSection": "Senior Officers",
+    "committeeSection": "Committee Members",
+    "emptyState": "Team details coming soon"
+  },
+  "programmes": {
+    "title": "Our Programmes",
+    "emptyState": "Our programmes are being updated",
+    "readMore": "Read More",
+    "backToList": "Back to Programmes"
+  },
+  "documents": {
+    "title": "Documents",
+    "colTitle": "Title",
+    "colCategory": "Category",
+    "colYear": "Year",
+    "colDate": "Upload Date",
+    "colSize": "Size",
+    "download": "Download",
+    "filterAll": "All",
+    "emptyState": "No documents available yet"
   }
 }

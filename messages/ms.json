@@ -76,5 +76,29 @@
     "errorEmail": "Sila masukkan alamat e-mel yang sah.",
     "errorMessageMin": "Mesej mesti sekurang-kurangnya 10 aksara.",
     "sendError": "Maaf, kami tidak dapat menghantar mesej anda. Sila cuba lagi atau e-mel kami terus."
+  },
+  "team": {
+    "title": "Pasukan Kami",
+    "presidentSection": "Presiden",
+    "seniorSection": "Pegawai Kanan",
+    "committeeSection": "Ahli Jawatankuasa",
+    "emptyState": "Maklumat pasukan akan datang"
+  },
+  "programmes": {
+    "title": "Program Kami",
+    "emptyState": "Program kami sedang dikemas kini",
+    "readMore": "Baca Lagi",
+    "backToList": "Kembali ke Program"
+  },
+  "documents": {
+    "title": "Dokumen",
+    "colTitle": "Tajuk",
+    "colCategory": "Kategori",
+    "colYear": "Tahun",
+    "colDate": "Tarikh Muat Naik",
+    "colSize": "Saiz",
+    "download": "Muat Turun",
+    "filterAll": "Semua",
+    "emptyState": "Tiada dokumen tersedia"
   }
 }
