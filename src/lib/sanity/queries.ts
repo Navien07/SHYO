@@ -1,4 +1,5 @@
 import { defineQuery } from 'next-sanity';
+import type { PortableTextBlock } from '@portabletext/types';
 import { sanityFetch } from '@/sanity/client';
 
 // --- Shared Types ---
@@ -27,6 +28,7 @@ export type Programme = {
   image?: { asset: { _ref: string } };
   category: string;
   slug: { current: string };
+  body?: { en?: PortableTextBlock[]; ms?: PortableTextBlock[]; ta?: PortableTextBlock[] };
 };
 
 export type TeamMember = {
@@ -35,6 +37,7 @@ export type TeamMember = {
   role: LocalizedString;
   photo?: { asset: { _ref: string } };
   order?: number;
+  tier?: 'president' | 'senior' | 'committee';
 };
 
 export type SanityDocument = {
@@ -42,7 +45,7 @@ export type SanityDocument = {
   title: LocalizedString;
   category: string;
   year: number;
-  file?: { asset: { _ref: string } };
+  file?: { asset?: { url?: string; size?: number } };
   uploadDate?: string;
 };
 
@@ -60,11 +63,15 @@ export const ALL_PROGRAMMES_QUERY = defineQuery(
 );
 
 export const ALL_TEAM_MEMBERS_QUERY = defineQuery(
-  `*[_type == "teamMember"] | order(order asc, _createdAt asc) { _id, name, role, photo, order }`
+  `*[_type == "teamMember"] | order(order asc, _createdAt asc) { _id, name, role, photo, order, tier }`
 );
 
 export const ALL_DOCUMENTS_QUERY = defineQuery(
-  `*[_type == "document"] | order(year desc, uploadDate desc) { _id, title, category, year, file, uploadDate }`
+  `*[_type == "pdfDocument"] | order(year desc, uploadDate desc) { _id, title, category, year, uploadDate, file { asset->{ url, size } } }`
+);
+
+export const PROGRAMME_DETAIL_QUERY = defineQuery(
+  `*[_type == "programme" && slug.current == $slug][0] { _id, title, description, image, category, slug, body }`
 );
 
 // --- Typed Fetch Helpers ---
@@ -106,5 +113,14 @@ export async function getAllDocuments(): Promise<SanityDocument[]> {
   return sanityFetch<SanityDocument[]>({
     query: ALL_DOCUMENTS_QUERY,
     tags: ['document'],
+  });
+}
+
+/** Fetches a single programme by slug. Cached with ISR tag 'programme'. */
+export async function getProgrammeBySlug(slug: string): Promise<Programme | null> {
+  return sanityFetch<Programme | null>({
+    query: PROGRAMME_DETAIL_QUERY,
+    params: { slug },
+    tags: ['programme'],
   });
 }
