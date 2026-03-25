@@ -54,13 +54,6 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "Registration Number"
   },
-  "team": {
-    "title": "Our Team",
-    "presidentSection": "President",
-    "seniorSection": "Senior Officers",
-    "committeeSection": "Committee Members",
-    "emptyState": "Team members will be listed here soon."
-  },
   "contact": {
     "title": "Contact Us",
     "formName": "Your Name",
@@ -89,11 +82,11 @@
     "presidentSection": "President",
     "seniorSection": "Senior Officers",
     "committeeSection": "Committee Members",
-    "emptyState": "Team details coming soon"
+    "emptyState": "Team members will be listed here soon."
   },
   "programmes": {
     "title": "Our Programmes",
-    "emptyState": "Our programmes are being updated",
+    "emptyState": "No programmes available yet. Check back soon.",
     "readMore": "Read More",
     "backToList": "Back to Programmes"
   },

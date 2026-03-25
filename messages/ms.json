@@ -54,13 +54,6 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "Nombor Pendaftaran"
   },
-  "team": {
-    "title": "Pasukan Kami",
-    "presidentSection": "Presiden",
-    "seniorSection": "Pegawai Kanan",
-    "committeeSection": "Ahli Jawatankuasa",
-    "emptyState": "Ahli pasukan akan disenaraikan di sini tidak lama lagi."
-  },
   "contact": {
     "title": "Hubungi Kami",
     "formName": "Nama Anda",
@@ -89,13 +82,13 @@
     "presidentSection": "Presiden",
     "seniorSection": "Pegawai Kanan",
     "committeeSection": "Ahli Jawatankuasa",
-    "emptyState": "Maklumat pasukan akan datang"
+    "emptyState": "Ahli pasukan akan disenaraikan di sini tidak lama lagi."
   },
   "programmes": {
     "title": "Program Kami",
-    "emptyState": "Program kami sedang dikemas kini",
-    "readMore": "Baca Lagi",
-    "backToList": "Kembali ke Program"
+    "emptyState": "Tiada program tersedia buat masa ini. Semak kembali tidak lama lagi.",
+    "readMore": "Baca Lanjut",
+    "backToList": "Kembali ke Senarai Program"
   },
   "documents": {
     "title": "Dokumen",
