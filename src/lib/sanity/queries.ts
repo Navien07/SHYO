@@ -42,7 +42,7 @@ export type SanityDocument = {
   title: LocalizedString;
   category: string;
   year: number;
-  file?: { asset: { _ref: string } };
+  file?: { asset?: { url?: string; size?: number } };
   uploadDate?: string;
 };
 
@@ -64,7 +64,7 @@ export const ALL_TEAM_MEMBERS_QUERY = defineQuery(
 );
 
 export const ALL_DOCUMENTS_QUERY = defineQuery(
-  `*[_type == "document"] | order(year desc, uploadDate desc) { _id, title, category, year, file, uploadDate }`
+  `*[_type == "document"] | order(year desc, uploadDate desc) { _id, title, category, year, file{ asset->{ url, size } }, uploadDate }`
 );
 
 // --- Typed Fetch Helpers ---

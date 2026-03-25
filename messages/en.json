@@ -54,6 +54,17 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "Registration Number"
   },
+  "documents": {
+    "title": "Documents",
+    "colTitle": "Title",
+    "colCategory": "Category",
+    "colYear": "Year",
+    "colDate": "Upload Date",
+    "colSize": "Size",
+    "download": "Download",
+    "filterAll": "All",
+    "emptyState": "No documents available yet"
+  },
   "contact": {
     "title": "Contact Us",
     "formName": "Your Name",
