@@ -127,10 +127,10 @@ Plans:
 
 **Requirements:** TEAM-01, TEAM-02, TEAM-03, PROG-01, PROG-02, PROG-03, PROG-04, DOCS-01, DOCS-02, DOCS-03, DOCS-04, DOCS-05
 
-**Plans:** 5 plans
+**Plans:** 1/5 plans executed
 
 Plans:
-- [ ] 04-01-PLAN.md — Wave 1: TDD stubs (fix schema test bug + create page test stubs + extend i18n tests)
+- [x] 04-01-PLAN.md — Wave 1: TDD stubs (fix schema test bug + create page test stubs + extend i18n tests)
 - [ ] 04-02-PLAN.md — Wave 2: Schema mutations (tier, body, title validation) + GROQ queries + types + i18n messages + @portabletext/react
 - [ ] 04-03-PLAN.md — Wave 3: Our Team page (tier-grouped member cards)
 - [ ] 04-04-PLAN.md — Wave 3: Programmes listing + detail pages (parallel with 04-03)
@@ -185,7 +185,7 @@ Plans:
 | 1 | Infrastructure | INFRA-01-07, ADMIN-01-04 (11 req) | Complete | 2026-03-12 |
 | 2 | Shared UI Foundation | BRAND-01-09, I18N-01-05 (14 req) | Complete | 2026-03-13 |
 | 3 | Core Static Pages | HOME-01-05, ABOUT-01-04, CONT-01-06 (16 req) | Complete | 2026-03-16 |
-| 4 | CMS-Driven Pages | TEAM-01-03, PROG-01-04, DOCS-01-05 (12 req) | Planning complete | -- |
+| 4 | CMS-Driven Pages | 1/5 | In Progress|  |
 | 5 | Membership & Polish | MEMB-01-06, SEO-01-05 (11 req) | Not started | -- |
 
 **Coverage:** 52/52 v1 requirements mapped across 5 phases. No orphans.
