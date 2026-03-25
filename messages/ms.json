@@ -54,6 +54,17 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "Nombor Pendaftaran"
   },
+  "documents": {
+    "title": "Dokumen",
+    "colTitle": "Tajuk",
+    "colCategory": "Kategori",
+    "colYear": "Tahun",
+    "colDate": "Tarikh Muat Naik",
+    "colSize": "Saiz",
+    "download": "Muat Turun",
+    "filterAll": "Semua",
+    "emptyState": "Tiada dokumen tersedia buat masa ini"
+  },
   "contact": {
     "title": "Hubungi Kami",
     "formName": "Nama Anda",

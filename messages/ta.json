@@ -54,6 +54,17 @@
     "registrationNumber": "PPM-003-10-20092002",
     "registrationLabel": "பதிவு எண்"
   },
+  "documents": {
+    "title": "ஆவணங்கள்",
+    "colTitle": "தலைப்பு",
+    "colCategory": "வகை",
+    "colYear": "ஆண்டு",
+    "colDate": "பதிவேற்றிய தேதி",
+    "colSize": "அளவு",
+    "download": "பதிவிறக்கவும்",
+    "filterAll": "அனைத்தும்",
+    "emptyState": "இப்போது ஆவணங்கள் எதுவும் இல்லை"
+  },
   "contact": {
     "title": "தொடர்பு கொள்ளுங்கள்",
     "formName": "உங்கள் பெயர்",
