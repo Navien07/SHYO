@@ -12,6 +12,31 @@ const REQUIRED_TEAM_KEYS = ['title', 'presidentSection', 'seniorSection', 'commi
 const REQUIRED_PROGRAMMES_KEYS = ['title', 'emptyState', 'readMore', 'backToList'];
 const REQUIRED_DOCUMENTS_KEYS = ['title', 'colTitle', 'colCategory', 'colYear', 'colDate', 'colSize', 'download', 'filterAll', 'emptyState'];
 
+const REQUIRED_MEMBERSHIP_KEYS = [
+  'title', 'fullNameLabel', 'fullNamePlaceholder', 'dobLabel', 'dobPlaceholder',
+  'genderLabel', 'genderMale', 'genderFemale', 'genderPreferNot',
+  'mobileLabel', 'mobilePlaceholder', 'emailLabel', 'emailPlaceholder',
+  'locationLabel', 'locationPlaceholder', 'interestsLabel',
+  'interestLeadership', 'interestCultural', 'interestCommunity',
+  'interestSocial', 'interestHealth', 'pdpaLabel', 'formSubmit',
+  'successTitle', 'successMessage', 'successClose', 'sendError',
+  'errorRequired', 'errorEmail', 'errorDobFormat', 'errorInterestsMin', 'errorPdpaRequired'
+];
+
+const REQUIRED_PRIVACY_KEYS = [
+  'title', 'lastUpdated', 'section1Heading', 'section1Body',
+  'section2Heading', 'section2Body', 'section3Heading', 'section3Body',
+  'section4Heading', 'section4Body', 'section5Heading', 'section5Body'
+];
+
+const REQUIRED_META_KEYS = [
+  'homeTitle', 'homeDescription', 'aboutTitle', 'aboutDescription',
+  'contactTitle', 'contactDescription', 'teamTitle', 'teamDescription',
+  'programmesTitle', 'programmesDescription', 'documentsTitle', 'documentsDescription',
+  'membershipTitle', 'membershipDescription', 'privacyTitle', 'privacyDescription',
+  'adminGuideTitle', 'adminGuideDescription'
+];
+
 function loadMessages(locale: string): Record<string, Record<string, string>> | null {
   try {
     return JSON.parse(
@@ -73,6 +98,21 @@ for (const locale of ['en', 'ms', 'ta']) {
     for (const key of REQUIRED_DOCUMENTS_KEYS) {
       it(`has documents.${key}`, () => {
         expect(messages?.documents?.[key]).toBeDefined();
+      });
+    }
+    for (const key of REQUIRED_MEMBERSHIP_KEYS) {
+      it(`has membership.${key}`, () => {
+        expect(messages?.membership?.[key]).toBeDefined();
+      });
+    }
+    for (const key of REQUIRED_PRIVACY_KEYS) {
+      it(`has privacy.${key}`, () => {
+        expect(messages?.privacy?.[key]).toBeDefined();
+      });
+    }
+    for (const key of REQUIRED_META_KEYS) {
+      it(`has meta.${key}`, () => {
+        expect(messages?.meta?.[key]).toBeDefined();
       });
     }
   });
