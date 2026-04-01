@@ -5,13 +5,13 @@ milestone_name: milestone
 current_phase: 05
 current_plan: 1
 status: Executing Phase 05
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-04-01T18:02:31.467Z"
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-04-01T18:09:08.038Z"
 progress:
   total_phases: 5
   completed_phases: 4
   total_plans: 20
-  completed_plans: 17
+  completed_plans: 18
 ---
 
 # Project State
@@ -24,7 +24,7 @@ progress:
 **Stage:** Phase 4 COMPLETE — all 5/5 plans done. Ready to plan Phase 5.
 **Current Phase:** 05
 **Current Plan:** 1
-**Stopped At:** Completed 05-01-PLAN.md
+**Stopped At:** Completed 05-02-PLAN.md
 **Resume From:** Plan Phase 5 — Membership & Polish
 
 ## Progress
@@ -86,6 +86,8 @@ Phase 4 (04-cms-driven-pages): [##########] 5/5 plans complete — DONE
 - [Phase 05-membership-polish]: en.json duplicate documents key removed — second occurrence kept per JSON spec (last wins) to restore clean state
 - [Phase 05-membership-polish]: BM and Tamil membership/privacy/meta translations are approximations — require native-speaker review before public launch
 - [Phase 05-membership-polish]: Test stubs use fs.readFileSync/existsSync pattern — avoids Next.js import errors in node/vitest environment
+- [Phase 05-membership-polish]: z.literal(true).refine() used instead of errorMap arg — ensures test substring z.literal(true) matches while retaining custom error message
+- [Phase 05-membership-polish]: HeroSection.tsx already uses locale-aware Link from @/i18n/navigation for membership CTA — no change needed in homepage
 
 ## Performance Metrics
 
@@ -107,6 +109,7 @@ Phase 4 (04-cms-driven-pages): [##########] 5/5 plans complete — DONE
 | Phase 04-cms-driven-pages P01 | 5 | 3 tasks | 5 files |
 | Phase 04-cms-driven-pages P04 | 3 | 2 tasks | 6 files |
 | Phase 05-membership-polish P01 | 5 | 2 tasks | 7 files |
+| Phase 05-membership-polish P02 | 4 | 3 tasks | 3 files |
 
 ## Flags
 

@@ -171,7 +171,7 @@ Plans:
 
 Plans:
 - [x] 05-01-PLAN.md — Wave 0: TDD stubs + i18n namespaces (membership, privacy, meta) + deduplicate en.json + env docs
-- [ ] 05-02-PLAN.md — Wave 1: Membership form (actions.ts + MembershipForm.tsx + page.tsx) with Zod + Resend dual-send
+- [x] 05-02-PLAN.md — Wave 1: Membership form (actions.ts + MembershipForm.tsx + page.tsx) with Zod + Resend dual-send
 - [ ] 05-03-PLAN.md — Wave 2: SEO metadata (generateMetadata + OG on all pages) + sitemap.ts + robots.ts
 - [ ] 05-04-PLAN.md — Wave 2: Privacy Policy page + Admin Guide page (parallel with 05-03)
 
