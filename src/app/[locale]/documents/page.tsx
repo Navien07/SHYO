@@ -1,9 +1,30 @@
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 import { getAllDocuments } from '@/lib/sanity/queries';
 import { DocumentLibrary } from './DocumentLibrary';
 
 interface DocumentsPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: DocumentsPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://seputehhyo.org';
+
+  return {
+    title: t('documentsTitle'),
+    description: t('documentsDescription'),
+    openGraph: {
+      title: t('documentsTitle'),
+      description: t('documentsDescription'),
+      url: `${baseUrl}/${locale}/documents`,
+      siteName: 'Seputeh HYO',
+      images: [{ url: `${baseUrl}/logo.svg`, width: 512, height: 512, alt: 'Seputeh HYO' }],
+      type: 'website',
+      locale,
+    },
+  };
 }
 
 export default async function DocumentsPage({ params }: DocumentsPageProps) {
