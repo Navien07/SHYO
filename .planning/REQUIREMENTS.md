@@ -65,12 +65,12 @@
 
 ### Be Part of Us (Membership)
 
-- [ ] **MEMB-01**: Membership application form with fields: full name, date of birth, gender, mobile, email, area/location, interests
-- [ ] **MEMB-02**: PDPA consent checkbox required before form submission
-- [ ] **MEMB-03**: Form validated client-side (React Hook Form + Zod) and server-side (Server Action)
-- [ ] **MEMB-04**: Automated confirmation email sent to applicant on successful submission (via Resend)
-- [ ] **MEMB-05**: Submission forwarded to org's official email address
-- [ ] **MEMB-06**: Form available in all three locales with translated labels and error messages
+- [x] **MEMB-01**: Membership application form with fields: full name, date of birth, gender, mobile, email, area/location, interests
+- [x] **MEMB-02**: PDPA consent checkbox required before form submission
+- [x] **MEMB-03**: Form validated client-side (React Hook Form + Zod) and server-side (Server Action)
+- [x] **MEMB-04**: Automated confirmation email sent to applicant on successful submission (via Resend)
+- [x] **MEMB-05**: Submission forwarded to org's official email address
+- [x] **MEMB-06**: Form available in all three locales with translated labels and error messages
 
 ### Contact Us
 
@@ -98,10 +98,10 @@
 
 ### SEO & Legal
 
-- [ ] **SEO-01**: Unique `<title>` and `<meta description>` per page in active locale
-- [ ] **SEO-02**: Open Graph tags for social sharing on all pages
-- [ ] **SEO-03**: `sitemap.xml` and `robots.txt` generated
-- [ ] **SEO-04**: Privacy Policy page covering PDPA 2010 compliance
+- [x] **SEO-01**: Unique `<title>` and `<meta description>` per page in active locale
+- [x] **SEO-02**: Open Graph tags for social sharing on all pages
+- [x] **SEO-03**: `sitemap.xml` and `robots.txt` generated
+- [x] **SEO-04**: Privacy Policy page covering PDPA 2010 compliance
 - [ ] **SEO-05**: HTTPS enforced (Vercel provides SSL by default)
 
 ---

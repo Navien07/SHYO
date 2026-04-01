@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 5
-current_plan: Not started
-status: Ready to plan
-stopped_at: Completed 04-04-PLAN.md — Programmes listing + detail pages
-last_updated: "2026-03-25T18:15:33.828Z"
+current_phase: 05
+current_plan: 1
+status: Executing Phase 05
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-04-01T18:02:31.467Z"
 progress:
   total_phases: 5
   completed_phases: 4
-  total_plans: 16
-  completed_plans: 16
+  total_plans: 20
+  completed_plans: 17
 ---
 
 # Project State
@@ -21,18 +21,18 @@ progress:
 
 ## Current Status
 
-**Stage:** Phase 4 in progress — 1/5 plans done
-**Current Phase:** 5
-**Current Plan:** Not started
-**Stopped At:** Completed 04-04-PLAN.md — Programmes listing + detail pages
-**Resume From:** 04-05-PLAN.md (Documents page)
+**Stage:** Phase 4 COMPLETE — all 5/5 plans done. Ready to plan Phase 5.
+**Current Phase:** 05
+**Current Plan:** 1
+**Stopped At:** Completed 05-01-PLAN.md
+**Resume From:** Plan Phase 5 — Membership & Polish
 
 ## Progress
 
 Phase 1 (01-infrastructure): [##########] 3/3 plans complete — DONE
 Phase 2 (02-shared-ui): [##########] 3/3 plans complete — DONE
 Phase 3 (03-core-static-pages): [##########] 5/5 plans complete — DONE
-Phase 4 (04-cms-driven-pages): [##        ] 1/5 plans complete — IN PROGRESS
+Phase 4 (04-cms-driven-pages): [##########] 5/5 plans complete — DONE
 
 ## Session History
 
@@ -83,6 +83,9 @@ Phase 4 (04-cms-driven-pages): [##        ] 1/5 plans complete — IN PROGRESS
 - [Phase 04-cms-driven-pages]: Schema test bug fix: import changed from '{ document }' to '{ pdfDocument }' — export name is pdfDocument to avoid browser global collision
 - [Phase 04-cms-driven-pages]: Wave 0 TDD: all Phase 4 page test stubs written RED before implementation — 83 failing assertions covering TEAM-01-03, PROG-01-04, DOCS-01-05
 - [Phase 04-cms-driven-pages]: generateStaticParams returns only { slug } objects for programmes — locale segment has its own generateStaticParams
+- [Phase 05-membership-polish]: en.json duplicate documents key removed — second occurrence kept per JSON spec (last wins) to restore clean state
+- [Phase 05-membership-polish]: BM and Tamil membership/privacy/meta translations are approximations — require native-speaker review before public launch
+- [Phase 05-membership-polish]: Test stubs use fs.readFileSync/existsSync pattern — avoids Next.js import errors in node/vitest environment
 
 ## Performance Metrics
 
@@ -103,6 +106,7 @@ Phase 4 (04-cms-driven-pages): [##        ] 1/5 plans complete — IN PROGRESS
 | Phase 03-core-static-pages P05 | 8 | 2 tasks | 3 files |
 | Phase 04-cms-driven-pages P01 | 5 | 3 tasks | 5 files |
 | Phase 04-cms-driven-pages P04 | 3 | 2 tasks | 6 files |
+| Phase 05-membership-polish P01 | 5 | 2 tasks | 7 files |
 
 ## Flags
 

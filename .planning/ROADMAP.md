@@ -167,10 +167,10 @@ Plans:
 
 **Requirements:** MEMB-01, MEMB-02, MEMB-03, MEMB-04, MEMB-05, MEMB-06, SEO-01, SEO-02, SEO-03, SEO-04, SEO-05
 
-**Plans:** 4 plans
+**Plans:** 1/4 plans executed
 
 Plans:
-- [ ] 05-01-PLAN.md — Wave 0: TDD stubs + i18n namespaces (membership, privacy, meta) + deduplicate en.json + env docs
+- [x] 05-01-PLAN.md — Wave 0: TDD stubs + i18n namespaces (membership, privacy, meta) + deduplicate en.json + env docs
 - [ ] 05-02-PLAN.md — Wave 1: Membership form (actions.ts + MembershipForm.tsx + page.tsx) with Zod + Resend dual-send
 - [ ] 05-03-PLAN.md — Wave 2: SEO metadata (generateMetadata + OG on all pages) + sitemap.ts + robots.ts
 - [ ] 05-04-PLAN.md — Wave 2: Privacy Policy page + Admin Guide page (parallel with 05-03)
@@ -194,7 +194,7 @@ Plans:
 | 2 | Shared UI Foundation | BRAND-01-09, I18N-01-05 (14 req) | Complete | 2026-03-13 |
 | 3 | Core Static Pages | HOME-01-05, ABOUT-01-04, CONT-01-06 (16 req) | Complete | 2026-03-16 |
 | 4 | CMS-Driven Pages | 1/5 | In Progress|  |
-| 5 | Membership & Polish | MEMB-01-06, SEO-01-05 (11 req) | Planned | -- |
+| 5 | Membership & Polish | 1/4 | In Progress|  |
 
 **Coverage:** 52/52 v1 requirements mapped across 5 phases. No orphans.
 
