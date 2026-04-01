@@ -172,8 +172,8 @@ Plans:
 Plans:
 - [x] 05-01-PLAN.md — Wave 0: TDD stubs + i18n namespaces (membership, privacy, meta) + deduplicate en.json + env docs
 - [x] 05-02-PLAN.md — Wave 1: Membership form (actions.ts + MembershipForm.tsx + page.tsx) with Zod + Resend dual-send
-- [ ] 05-03-PLAN.md — Wave 2: SEO metadata (generateMetadata + OG on all pages) + sitemap.ts + robots.ts
-- [ ] 05-04-PLAN.md — Wave 2: Privacy Policy page + Admin Guide page (parallel with 05-03)
+- [x] 05-03-PLAN.md — Wave 2: SEO metadata (generateMetadata + OG on all pages) + sitemap.ts + robots.ts
+- [x] 05-04-PLAN.md — Wave 2: Privacy Policy page + Admin Guide page (parallel with 05-03)
 
 **Success Criteria:**
 1. A user can complete and submit the membership form in Tamil, English, and Bahasa Malaysia; a confirmation email arrives in the applicant's inbox and a notification arrives in the org's inbox within 60 seconds of submission.

@@ -102,7 +102,7 @@
 - [x] **SEO-02**: Open Graph tags for social sharing on all pages
 - [x] **SEO-03**: `sitemap.xml` and `robots.txt` generated
 - [x] **SEO-04**: Privacy Policy page covering PDPA 2010 compliance
-- [ ] **SEO-05**: HTTPS enforced (Vercel provides SSL by default)
+- [x] **SEO-05**: HTTPS enforced (Vercel provides SSL by default)
 
 ---
 

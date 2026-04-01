@@ -5,13 +5,13 @@ milestone_name: milestone
 current_phase: 05
 current_plan: 1
 status: Executing Phase 05
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-04-01T18:09:08.038Z"
+stopped_at: Completed 05-04-PLAN.md — awaiting human-verify checkpoints for HTTPS and QA
+last_updated: "2026-04-01T18:50:37.255Z"
 progress:
   total_phases: 5
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 20
-  completed_plans: 18
+  completed_plans: 20
 ---
 
 # Project State
@@ -24,7 +24,7 @@ progress:
 **Stage:** Phase 4 COMPLETE — all 5/5 plans done. Ready to plan Phase 5.
 **Current Phase:** 05
 **Current Plan:** 1
-**Stopped At:** Completed 05-02-PLAN.md
+**Stopped At:** Completed 05-04-PLAN.md — awaiting human-verify checkpoints for HTTPS and QA
 **Resume From:** Plan Phase 5 — Membership & Polish
 
 ## Progress
@@ -88,6 +88,7 @@ Phase 4 (04-cms-driven-pages): [##########] 5/5 plans complete — DONE
 - [Phase 05-membership-polish]: Test stubs use fs.readFileSync/existsSync pattern — avoids Next.js import errors in node/vitest environment
 - [Phase 05-membership-polish]: z.literal(true).refine() used instead of errorMap arg — ensures test substring z.literal(true) matches while retaining custom error message
 - [Phase 05-membership-polish]: HeroSection.tsx already uses locale-aware Link from @/i18n/navigation for membership CTA — no change needed in homepage
+- [Phase 05-membership-polish]: Privacy page uses font-normal on H2 per UI-SPEC; admin-guide is EN-only noindex with robots metadata
 
 ## Performance Metrics
 
@@ -110,6 +111,8 @@ Phase 4 (04-cms-driven-pages): [##########] 5/5 plans complete — DONE
 | Phase 04-cms-driven-pages P04 | 3 | 2 tasks | 6 files |
 | Phase 05-membership-polish P01 | 5 | 2 tasks | 7 files |
 | Phase 05-membership-polish P02 | 4 | 3 tasks | 3 files |
+| Phase 05-membership-polish P03 | 8 | 2 tasks | 10 files |
+| Phase 05-membership-polish P04 | 5 | 2 tasks | 2 files |
 
 ## Flags
 
