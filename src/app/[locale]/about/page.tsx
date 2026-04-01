@@ -1,10 +1,33 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 import imageUrlBuilder from '@sanity/image-url';
 import { client } from '@/sanity/client';
 import { getSiteSettings } from '@/lib/sanity/queries';
 
 const builder = imageUrlBuilder(client);
+
+type AboutPageProps = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://seputehhyo.org';
+
+  return {
+    title: t('aboutTitle'),
+    description: t('aboutDescription'),
+    openGraph: {
+      title: t('aboutTitle'),
+      description: t('aboutDescription'),
+      url: `${baseUrl}/${locale}/about`,
+      siteName: 'Seputeh HYO',
+      images: [{ url: `${baseUrl}/logo.svg`, width: 512, height: 512, alt: 'Seputeh HYO' }],
+      type: 'website',
+      locale,
+    },
+  };
+}
 
 export default async function AboutPage() {
   const [t, siteSettings] = await Promise.all([

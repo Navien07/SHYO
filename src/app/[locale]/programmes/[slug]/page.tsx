@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 import { PortableText } from '@portabletext/react';
 import imageUrlBuilder from '@sanity/image-url';
 import { client } from '@/sanity/client';
@@ -16,6 +17,26 @@ export async function generateStaticParams() {
 
 interface ProgrammeDetailProps {
   params: Promise<{ locale: string; slug: string }>;
+}
+
+export async function generateMetadata({ params }: ProgrammeDetailProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://seputehhyo.org';
+
+  return {
+    title: t('programmesTitle'),
+    description: t('programmesDescription'),
+    openGraph: {
+      title: t('programmesTitle'),
+      description: t('programmesDescription'),
+      url: `${baseUrl}/${locale}/programmes/${slug}`,
+      siteName: 'Seputeh HYO',
+      images: [{ url: `${baseUrl}/logo.svg`, width: 512, height: 512, alt: 'Seputeh HYO' }],
+      type: 'website',
+      locale,
+    },
+  };
 }
 
 export default async function ProgrammeDetailPage({ params }: ProgrammeDetailProps) {

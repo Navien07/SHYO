@@ -1,10 +1,31 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 import imageUrlBuilder from '@sanity/image-url';
 import { Users } from 'lucide-react';
 import { client } from '@/sanity/client';
 import { getAllTeamMembers } from '@/lib/sanity/queries';
 import type { TeamMember } from '@/lib/sanity/queries';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://seputehhyo.org';
+
+  return {
+    title: t('teamTitle'),
+    description: t('teamDescription'),
+    openGraph: {
+      title: t('teamTitle'),
+      description: t('teamDescription'),
+      url: `${baseUrl}/${locale}/team`,
+      siteName: 'Seputeh HYO',
+      images: [{ url: `${baseUrl}/logo.svg`, width: 512, height: 512, alt: 'Seputeh HYO' }],
+      type: 'website',
+      locale,
+    },
+  };
+}
 
 const builder = imageUrlBuilder(client);
 
