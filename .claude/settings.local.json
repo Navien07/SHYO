@@ -133,7 +133,22 @@
       "Skill(gsd:resume-work)",
       "Skill(gsd:update)",
       "Skill(gsd:discuss-phase)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(cd \"C:/Users/navie/OneDrive/Documents/ANeura/HYO\" && npx jest --passWithNoTests --no-coverage -q 2>&1 | tail -20)",
+      "Bash(cd \"C:/Users/navie/OneDrive/Documents/ANeura/HYO\" && npm test -- --passWithNoTests --no-coverage 2>&1 | tail -25)",
+      "Bash(find \"C:/Users/navie/OneDrive/Documents/ANeura/HYO/.claude/worktrees/agent-ae972576/src/app/[locale]\" -type f -o -type d 2>/dev/null | sort)",
+      "Bash(cd \"C:/Users/navie/OneDrive/Documents/ANeura/HYO/.claude/worktrees/agent-ae972576\" && node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\('messages/ta.json','utf8'\\)\\); console.log\\(Object.keys\\(d\\)\\)\")",
+      "Bash(cd \"C:/Users/navie/OneDrive/Documents/ANeura/HYO/.claude/worktrees/agent-ae972576\" && node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\('messages/en.json','utf8'\\)\\); console.log\\(Object.keys\\(d\\)\\)\")",
+      "Bash(find \"/c/Users/navie/OneDrive/Documents/ANeura/HYO/.claude/worktrees/agent-ae972576/src/app\" -name \"*.tsx\" 2>/dev/null | sort)",
+      "Bash(cat \"/c/Users/navie/OneDrive/Documents/ANeura/HYO/.claude/worktrees/agent-ae972576/messages/en.json\" | python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
+      "Bash(cat \"/c/Users/navie/OneDrive/Documents/ANeura/HYO/.claude/worktrees/agent-ae972576/package.json\" | python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); deps=d.get\\('dependencies',{}\\); print\\('@portabletext/react:', deps.get\\('@portabletext/react','NOT FOUND'\\)\\)\")",
+      "Bash(cd \"C:/Users/navie/OneDrive/Documents/ANeura/HYO\" && node \"$HOME/.claude/get-shit-done/bin/gsd-tools.cjs\" phase complete \"04\" 2>&1)",
+      "Bash(cd \"C:/Users/navie/OneDrive/Documents/ANeura/HYO\" && node \"$HOME/.claude/get-shit-done/bin/gsd-tools.cjs\" commit \"docs\\(phase-04\\): complete phase execution — team, programmes, document library\" --files .planning/ROADMAP.md .planning/STATE.md .planning/phases/04-cms-driven-pages/04-VERIFICATION.md 2>&1)",
+      "Read(//tmp/**)",
+      "Bash(cp -r skills/* ~/.claude/skills/)",
+      "Bash(echo \"=== GLOBAL SKILLS ===\" && ls ~/.claude/skills/ | wc -l && echo \"skills installed\" && ls ~/.claude/skills/ | head -20 && echo \"...\" && echo \"\" && echo \"=== GLOBAL CLAUDE.MD ===\" && head -5 ~/.claude/CLAUDE.md && echo \"\" && echo \"=== SETTINGS.JSON ===\" && cat ~/.claude/settings.json | python3 -m json.tool > /dev/null && echo \"Valid JSON ✓\" && echo \"\" && echo \"=== PROJECT .claude ===\" && ls .claude/ && echo \"\" && echo \"✅ Navien's Claude Code environment is ready.\" && echo \"Available slash commands: /gsd, /ui-ux-pro-max + all ECC skills\")",
+      "Skill(gsd:plan-phase)",
+      "Bash(cd \"C:\\\\Users\\\\navie\\\\OneDrive\\\\Documents\\\\ANeura\\\\HYO\" && node -e \"require.resolve\\('zod'\\)\" 2>&1 && node -e \"console.log\\(require\\('zod/package.json'\\).version\\)\" 2>&1)"
     ]
   }
 }
