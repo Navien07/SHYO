@@ -5,7 +5,8 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: false, // Disable CDN so webhook-triggered revalidation fetches fresh data
+  useCdn: false,
+  token: process.env.SANITY_API_TOKEN,
 });
 
 export async function sanityFetch<T>({
@@ -19,6 +20,6 @@ export async function sanityFetch<T>({
 }): Promise<T> {
   return client.fetch<T>(query, params, {
     next: { tags },
-    cache: 'force-cache', // MUST be explicit in Next.js 15 (default changed to no-store)
+    cache: 'force-cache',
   });
 }

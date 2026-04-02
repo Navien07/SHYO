@@ -1,0 +1,10 @@
+[33m85bcc38[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Phase 5 Completion
+[33m86447cb[m docs(phase-05): update state, roadmap, and requirements after plans 03 and 04
+[33m558e2c0[m docs(05-04): complete privacy policy and admin guide plan
+[33m3eb968a[m feat(05-04): create Admin Guide page with noindex and 6 Sanity Studio sections
+[33mb922c1c[m feat(05-04): create Privacy Policy page with PDPA 2010 sections and generateMetadata
+[33m3924936[m docs(05-03): complete SEO metadata and sitemap plan
+[33mb967013[m feat(05-03): add generateMetadata with Open Graph to home, about, contact, team, programmes pages
+[33mefd5a73[m feat(05-03): create sitemap.ts and robots.ts for SEO-03
+[33m36f997a[m feat(05-03): add generateMetadata with Open Graph to documents and membership pages
+[33m7a87a29[m[33m ([m[1;32mworktree-agent-adf1db41[m[33m, [m[1;32mworktree-agent-a9ff4949[m[33m, [m[1;32mworktree-agent-a52e984b[m[33m, [m[1;32mworktree-agent-a37b45f9[m[33m)[m docs(05-02): complete membership form implementation plan
